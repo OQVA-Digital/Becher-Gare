@@ -1,0 +1,379 @@
+body {
+    color: var(--grey);
+    background-color: white;
+    background-image: linear-gradient(90deg, #eee, transparent 8%, transparent 92%, #eee);
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: calc(clamp(12rem, 20vw, 12rem) * 0.6);
+    background-color: var(--c1a);
+    /* margin-bottom: calc(clamp(12rem, 20vw, 12rem) * 0.6); */
+    z-index: 2;
+    position: relative;
+    box-shadow: 0 1rem 3rem -2rem var(--c1);
+}
+
+header .return {
+    position: absolute;
+    padding: 1.5rem;
+    left: clamp(1rem, 3vw, 3rem);
+    width: fit-content;
+    border-radius: 10rem;
+    background-color: transparent;
+} header .return:hover {
+    background-color: rgb(231 221 164 / 10%);
+}
+
+header .return div {
+    width: 0.6rem;
+    height: 0.6rem;
+    border-top: 0.3rem solid var(--light);
+    border-left: 0.3rem solid var(--light);
+    transform: translateX(25%) rotate(-45deg);
+}
+
+header .logo {
+    width: clamp(10rem, 50vw, 20rem);
+    display: flex;
+}
+
+
+main {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-left: solid;
+    border-right: solid;
+    padding: 3rem 0 12rem;
+    border-width: clamp(0.6rem, 1.5vw, 1.2rem);
+    border-color: var(--c1);
+}
+
+h1 {
+    font-size: clamp(1.5rem, 14vw, 7rem);
+    font-weight: 700;
+    text-align: center;
+    margin: clamp(2rem, calc(2vh + 2vw), 4rem) 0;
+    color: var(--c1a);
+    font-family: 'Bebas Neue';
+}
+
+h1 span {
+    display: block;
+    font-size: 0.5em;
+    color: var(--grey2);
+    font-weight: 600;
+    letter-spacing: 0.3rem;
+}
+
+section {
+    width: clamp(10rem, 86vw, 70rem);
+    box-sizing: border-box;
+    padding: 0 0.8rem;
+    /* background-image: linear-gradient(0deg, #eee, transparent 90%); */
+}
+
+section h2 {
+    padding: 2rem 0 1rem;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    /* text-decoration: underline; */
+    /* text-underline-offset: 0.8rem; */
+    /* text-decoration-color: var(--c1a); */
+    font-family: 'Bebas Neue';
+    font-weight: 900;
+    font-size: clamp(3.5rem, 5vw, 4rem);
+    margin-bottom: 1rem;
+    /* backdrop-filter: blur(1rem); */
+    z-index: 4;
+}
+
+section h2::before {
+    content: '';
+    background-color: var(--c1a);
+    position: absolute;
+    left: -1rem;
+    bottom: 0;
+    height: 0.4rem;
+    width: 5rem;
+}
+
+main>hr {
+    border: unset;
+    height: 0.1rem;
+    background-color: var(--light);
+    margin: 2rem 0;
+    width: clamp(10rem, 86vw, 70rem);
+}
+
+.catalogue {
+    display: flex;
+    flex-direction: column;
+    /* gap: 1.6rem; */
+    font-size: clamp(1.4rem, 3.5vw, 1.5rem);
+    margin-bottom: 2rem;
+    letter-spacing: 0.03em;
+    color: var(--grey);
+}
+
+.catalogue>div,
+article>div {
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+    font-weight: 600;
+    justify-content: space-between;
+    line-height: 1.4;
+    padding: 0.9rem 0;
+}
+
+.catalogue>div>p:last-of-type {
+    /* font-weight: 700; */
+    /* text-decoration: underline; */
+    text-underline-offset: 0.4rem;
+    padding: 0 0.4rem;
+    text-decoration-color: var(--lightgrey);
+}
+
+.catalogue>div:hover>p:last-of-type {
+    color: var(--c1a);
+    text-decoration: underline;
+    background-color: #F6F6F6;
+}
+
+.item_name {
+    max-width: 60rem;
+    display: inline-flex;
+    align-items: start;
+    gap: 1rem;
+    position: relative;
+    justify-content: center;
+}
+
+.allergens_bt {
+    width: 1.7rem;
+    min-width: 1.7rem;
+    height: 1.7rem;
+    border-radius: 0.4rem;
+    display: block;
+    white-space: normal;
+    text-align: left;
+    z-index: 2;
+    background-image: url(../assets/icons/info.svg);
+    background-size: 17%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #EEE;
+    border: 0.1rem solid var(--light);
+    margin-top: 0.2rem;
+}
+
+.allergens_bt:hover {
+    z-index: 6;
+}
+
+.allergens_bt:focus .allergens,
+.allergens_bt:hover .allergens {
+    opacity: 1;
+    visibility: visible;
+}
+
+.allergens {
+    position: absolute;
+    left: 1.7rem;
+    top: 3rem;
+    background-color: var(--c1a);
+    padding: 1.4rem 1.8rem;
+    box-sizing: border-box;
+    border-radius: 0 0.7rem 0.7rem 0.7rem;
+    color: white;
+    font-weight: 500;
+    font-size: 1.4rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.2s ease, opacity 0.2s ease, visibility 0.2s ease;
+    width: clamp(10rem, 75vw, 50rem);
+}
+
+.allergens::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-top: 0.6rem solid transparent;
+    border-right: 0.6rem solid transparent;
+    border-left: 0.6rem solid var(--c1a);
+    border-bottom: 0.6rem solid var(--c1a);
+    transform: translateY(-92%);
+}
+
+.allergens ul {
+    padding-left: 2rem;
+    margin: 0.6rem 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    text-align: left;
+}
+
+.catalogue>div hr,
+article>div hr {
+    flex: 1;
+    border: none;
+    border-bottom: 0.25rem dotted var(--light);
+    min-width: 3rem;
+}
+
+.catalogue>div sub {
+    color: var(--c1a);
+    font-style: italic;
+    display: block;
+    font-size: 0.8em;
+    margin-top: 0.4rem;
+    font-weight: 700;
+}
+
+.catalogue .obs {
+    margin-top: 2rem;
+}
+
+.obs {
+    font-weight: 600;
+    font-style: italic;
+    color: var(--c1a);
+    text-align: center;
+    line-height: 1.4;
+}
+
+.catalogue .variation {
+    margin: 0 0 1rem 1.5rem;
+    border-left: 0.3rem solid var(--light);
+    padding: 0.6rem 0 0.6rem 1.5rem;
+}
+
+
+article {
+    background-color: var(--c1);
+    text-align: center;
+    padding: 4rem 2rem;
+    width: clamp(10rem, 86vw, 46rem);
+    box-sizing: border-box;
+    /* min-height: 50rem; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.2rem;
+    color: white;
+    outline: 0.1rem solid var(--c2);
+    outline-offset: -0.7rem;
+}
+
+article h3 {
+    font-size: clamp(2rem, 6vw, 3rem);
+    font-weight: 700;
+    color: var(--c2);
+    max-width: 30rem;
+    line-height: 1.3;
+}
+
+article>div {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+article>div hr {
+    border-bottom-style: solid;
+    border-bottom-width: 0.2rem;
+    border-color: var(--c1a);
+}
+
+article .price {
+    font-size: 2.5rem;
+}
+
+article .included {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin: 1rem 0;
+}
+
+.deals {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: unset;
+    gap: 4rem;
+    margin-top: 5rem;
+    z-index: 2;
+}
+
+
+.circle_ctnr {
+    overflow: hidden;
+    position: fixed;
+    inset: 0;
+    z-index: 5;
+    pointer-events: none;
+    mix-blend-mode: darken;
+    opacity: 0.5;
+}
+
+.circle {
+    background-image: url(../assets/word-circle.svg);
+    position: absolute;
+    width: clamp(25rem, 150vw, 100rem);
+    height: clamp(25rem, 150vw, 100rem);
+    transform: translateY(-50%);
+    background-size: 100%;
+    background-position: top;
+    background-repeat: no-repeat;
+    left: -25vw;
+    right: 0;
+    bottom: 10%;
+    margin: 0 auto;
+    transform: translateY(calc(-10%)) rotate(0deg);
+    transition: transform 0.4s cubic-bezier(0, 0, 0.2, 1);
+    will-change: transform;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:900px) {
+
+
+
+
+    .circle {
+        left: 0;
+        top: 5%;
+    }
+
+
+
+
+
+
+
+}
