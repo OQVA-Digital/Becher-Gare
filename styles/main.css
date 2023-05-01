@@ -690,6 +690,7 @@ section.the_road_trip {
     height: 100%;
     width: 100vw;
     object-fit: cover;
+    background-color: var(--c1);
 }
 
 .the_road_trip h2 {
