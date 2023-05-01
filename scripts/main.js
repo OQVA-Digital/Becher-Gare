@@ -42,32 +42,15 @@ for(i=0;i<dynamicVid.length;i++) {
 var allSources = document.querySelectorAll('video source')
 
 if (w.matches) {
-    alert('matches mobile')
     for(i=0;i<allSources.length;i++) {
         allSources[i].removeAttribute("src");
         allSources[i].setAttribute("src", `${dynamicVid[i].getAttribute('data-src')}_min.mp4`)
     }
-    alert('sources attributed')
-    for(i=0;i<dynamicVid.length;i++) {
-        dynamicVid[i].pause();
-        dynamicVid[i].load();
-        dynamicVid[i].play();
-    }
-    alert('videos should play')
 } else {
-    alert('matches desktop')
-
     for(i=0;i<allSources.length;i++) {
         allSources[i].removeAttribute("src");
         allSources[i].setAttribute("src", `${dynamicVid[i].getAttribute('data-src')}.mp4`);
     }
-    alert('sources attributed')
-    for(i=0;i<dynamicVid.length;i++) {
-        dynamicVid[i].pause();
-        dynamicVid[i].load();
-        dynamicVid[i].play();
-    }
-    alert('videos should play')
 }
 
 
@@ -75,6 +58,11 @@ if (w.matches) {
 
 
 
+for(i=0;i<dynamicVid.length;i++) {
+    dynamicVid[i].pause();
+    dynamicVid[i].load();
+    dynamicVid[i].play();
+}
 
 
 
