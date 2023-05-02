@@ -117,14 +117,12 @@ for(i=0;i<closeButtons.length;i++) {
 
 
 document.addEventListener("keydown", e => {
-    console.log("keydown: " + e.key);
     if (e.key == "Escape") {
         if(showingContact == true) {
             toggleContact()
         } else if(showingBook == true) {
             toggleBook()
         }
-
     }
   });
 

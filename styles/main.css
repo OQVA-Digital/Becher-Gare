@@ -132,8 +132,8 @@ header nav button:hover {
     margin: 0 auto;
     width: clamp(10rem, 86vw, 45rem);
     height: fit-content;
-    background-color: var(--light);
-    color: var(--grey);
+    background-color: var(--grey2);
+    color: white;
     bottom: 0;
     border-radius: 1.2rem;
     /* transform: translateY(-50%); */
@@ -147,7 +147,8 @@ header nav button:hover {
     box-sizing: border-box;
     transform: translateY(-1rem);
     max-height: 70vh;
-    box-shadow: 0 1rem 5rem -2rem;
+    box-shadow: 0 1rem 5rem -2rem var(--grey);
+    border: 0.1rem solid var(--lightgrey);
 }
 
 .modal::before {
@@ -191,15 +192,16 @@ header nav button:hover {
 .modal form input,
 .modal form textarea {
     padding: 1rem;
-    border-radius: 0.4rem;
+    border-radius: 0.2rem;
     min-height: 2rem;
     box-sizing: border-box;
-    color: var(--dark);
+    color: white;
     font-family: 'Montserrat', sans-serif;
     border: unset;
     font-size: 1.5rem;
-    background-color: #c8d6be;
-    font-weight: 600;
+    background-color: var(--grey);
+    font-weight: 400;
+    letter-spacing: 0.1rem;
 }
 
 .modal form input {}
@@ -217,9 +219,9 @@ header nav button:hover {
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
-    font-size: 2rem;
-    color: var(--grey);
-    font-weight: 600;
+    font-size: 2.1rem;
+    font-weight: 500;
+    letter-spacing: 2px;
 }
 
 .modal form button {
@@ -228,21 +230,20 @@ header nav button:hover {
     padding: 0.7rem 5rem;
     margin: 0rem auto 0;
     font-size: 2.4rem;
-    font-weight: 600;
+    font-weight: 800;
     letter-spacing: 0.4rem;
     width: 100%;
     cursor: pointer;
-    color: var(--lightgrey2);
+    color: white;
     transition: background-color 0.3s ease;
-    border: 0.1rem solid var(--c1);
-    border-radius: 0.6rem;
-    background-color: var(--dark);
+    border: 0.1rem solid rgb(255 255 255 / 15%);
+    border-bottom: 0.5rem solid var(--c1);
+    border-radius: 0.2rem;
+    background-color: var(--c1a);
 }
 
 .book.modal {
-    /* text-align: center; */
     font-size: clamp(1.3rem, 3.5vw, 1.5rem);
-    text-align: c;
 }
 
 .book.modal a {
@@ -259,8 +260,8 @@ header nav button:hover {
 }
 
 .book.modal h3 {
-    font-size: clamp(1.3rem, 6vw, 3.4rem);
-    color: var(--c1a);
+    font-size: clamp(1.3rem, 6.6vw, 3.2rem);
+    color: var(--c2);
     position: relative;
     padding-bottom: 0.6rem;
 }
@@ -277,7 +278,7 @@ header nav button:hover {
 
 .book.modal p {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
+    font-weight: 500;
     margin: 0.6rem 0 2rem;
     line-height: 1.5;
     letter-spacing: 0;
@@ -428,7 +429,7 @@ section.intro {
 }
 
 .intro .video_ctnr video {
-    object-position: 23% -10%;
+    object-position: 23% 11rem;
 }
 
 .intro .content {
@@ -674,7 +675,7 @@ section.the_road_trip {
 }
 
 .the_road_trip .video_ctnr {
-    height: clamp(10rem, 140vw, 55rem);
+    height: clamp(10rem, 150vw, 75rem);
     /* overflow: hidden; */
     background-color: var(--grey);
     position: relative;
@@ -1024,6 +1025,10 @@ footer {
         background-color: var(--grey);
     }
 
+    .intro .video_ctnr video {
+        object-position: top;
+    }
+
     .intro address {
         flex-direction: row;
     }
@@ -1090,6 +1095,10 @@ footer {
     .the_road_trip .composition {
         width: clamp(10rem, 45vw, 78rem);
         flex: 1;
+    }
+
+    .the_road_trip .video_ctnr {
+        max-height: 62vh;
     }
 
 

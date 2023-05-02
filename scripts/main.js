@@ -28,26 +28,26 @@ window.addEventListener('scroll', function() {
 
 // Video handling
 
-var w = window.matchMedia("(max-width: 1200px)");
-var roadTripVideo = document.querySelector(".the_road_trip video");
-var roadTripSource = document.createElement("source");
-roadTripSource.id = "hvid";
-roadTripSource.setAttribute("type", "video/mp4");
-roadTripVideo.appendChild(roadTripSource);
+// var w = window.matchMedia("(max-width: 1200px)");
+// var roadTripVideo = document.querySelector(".the_road_trip video");
+// var roadTripSource = document.createElement("source");
+// roadTripSource.id = "hvid";
+// roadTripSource.setAttribute("type", "video/mp4");
+// roadTripVideo.appendChild(roadTripSource);
 
-if (w.matches) {
-  roadTripVideo.pause();
-  roadTripSource.removeAttribute("src");
-  roadTripSource.setAttribute("src", "assets/video/BecherGare_Driving_min.mp4");
-  roadTripVideo.load();
-  roadTripVideo.play();
-} else {
-  roadTripVideo.pause();
-  roadTripSource.removeAttribute("src");
-  roadTripSource.setAttribute("src", "assets/video/BecherGare_Driving.mp4");
-  roadTripVideo.load();
-  roadTripVideo.play();
-}
+// if (w.matches) {
+//   roadTripVideo.pause();
+//   roadTripSource.removeAttribute("src");
+//   roadTripSource.setAttribute("src", "assets/video/BecherGare_Driving_min.mp4");
+//   roadTripVideo.load();
+//   roadTripVideo.play();
+// } else {
+//   roadTripVideo.pause();
+//   roadTripSource.removeAttribute("src");
+//   roadTripSource.setAttribute("src", "assets/video/BecherGare_Driving.mp4");
+//   roadTripVideo.load();
+//   roadTripVideo.play();
+// }
 
 
 
