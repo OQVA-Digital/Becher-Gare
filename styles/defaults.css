@@ -127,6 +127,7 @@ button {
     color: inherit;
     letter-spacing: inherit;
     white-space: nowrap;
+    text-align: inherit;
 }
 
 button:focus-visible {
