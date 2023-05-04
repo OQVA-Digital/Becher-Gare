@@ -90,65 +90,30 @@ ScrollReveal().reveal('.reveal', slideUp);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// RECURSIVE Video handling
-
-// var w = window.matchMedia("(max-width: 1200px)");
-// var dynamicVid = document.querySelectorAll("video");
-
-// for(i=0;i<dynamicVid.length;i++) {
-//     var dynamicSource = document.createElement("source");
-//     dynamicSource.id = `hvid${i}`;
-//     dynamicSource.setAttribute("type", "video/mp4");
-//     dynamicVid[i].appendChild(dynamicSource);
-// }
-
-// var allSources = document.querySelectorAll('video source')
-
-// if (w.matches) {
-//     for(i=0;i<allSources.length;i++) {
-//         allSources[i].removeAttribute("src");
-//         allSources[i].setAttribute("src", `${dynamicVid[i].getAttribute('data-src')}_min.mp4`)
-//     }
-// } else {
-//     for(i=0;i<allSources.length;i++) {
-//         allSources[i].removeAttribute("src");
-//         allSources[i].setAttribute("src", `${dynamicVid[i].getAttribute('data-src')}.mp4`);
-//     }
-// }
-
-
-
-
-
-
-// for(i=0;i<dynamicVid.length;i++) {
-//     dynamicVid[i].pause();
-//     dynamicVid[i].load();
-//     dynamicVid[i].play();
-// }
-
-
+document.addEventListener("DOMContentLoaded", function() {
+    var videos = [].slice.call(document.querySelectorAll("video.lazy"));
+  
+    if ("IntersectionObserver" in window) {
+      var videoObserver = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(function(video) {
+          if (video.isIntersecting) {
+            // video.poster = video.dataset.poster;
+            for (var source in video.target.children) {
+              var videoSource = video.target.children[source];
+              if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
+                videoSource.src = videoSource.dataset.src;
+              }
+            }
+  
+            video.target.load();
+            video.target.classList.remove("lazy");
+            videoObserver.unobserve(video.target);
+          }
+        });
+      });
+  
+      videos.forEach(function(video) {
+        videoObserver.observe(video);
+      });
+    }
+  });

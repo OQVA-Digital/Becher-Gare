@@ -59,7 +59,7 @@ header nav.show {
     transform: translateY(-6rem);
 }
 
-header nav hr {
+header nav hr, footer nav hr {
     width: 2rem;
     border: unset;
     border-top: 0.1rem solid #556a76;
@@ -130,9 +130,9 @@ header nav button:hover {
     left: 0;
     top: clamp(1rem, calc(16vh + 16vw), 17rem);
     margin: 0 auto;
-    width: clamp(10rem, 86vw, 45rem);
+    width: clamp(10rem, 86vw, 42rem);
     height: fit-content;
-    background-color: var(--light);
+    background-color: white;
     color: var(--grey);
     bottom: 0;
     border-radius: 1.2rem;
@@ -148,7 +148,7 @@ header nav button:hover {
     transform: translateY(-1rem);
     max-height: 70vh;
     box-shadow: 0 1rem 5rem -2rem var(--grey);
-    border: 0.2rem solid white;
+    border: 0.2rem solid var(--c1a);
 }
 
 .modal::before {
@@ -199,10 +199,10 @@ header nav button:hover {
     font-family: 'Montserrat', sans-serif;
     border: unset;
     font-size: 1.5rem;
-    background-color: var(--light);
+    background-color: #EEE;
     font-weight: 600;
     letter-spacing: 0.1rem;
-    border: 0.1rem solid white;
+    border: 0.1rem solid var(--light);
 }
 
 .modal form input {}
@@ -238,13 +238,13 @@ header nav button:hover {
     color: white;
     transition: background-color 0.3s ease;
     border: 0.1rem solid rgb(255 255 255 / 15%);
-    border-bottom: 0.3rem solid var(--c1);
+    border-bottom: 0.4rem solid var(--c1);
     border-radius: 0.2rem;
     background-color: var(--c1a);
 }
 
 .book.modal {
-    font-size: clamp(1.3rem, 3.5vw, 1.5rem);
+    font-size: clamp(1.3rem, 3.5vw, 1.4rem);
 }
 
 .book.modal a {
@@ -256,15 +256,16 @@ header nav button:hover {
     border-radius: 0.2rem;
     font-weight: 800;
     font-size: clamp(1.8rem, 4.7vw, 2.1rem);
-    border-bottom: 0.2rem solid var(--c1);
-    margin-top: 1rem;
+    border-bottom: 0.4rem solid var(--c1);
+    margin-top: 2rem;
 }
 
 .book.modal h3 {
-    font-size: clamp(1.3rem, 6.6vw, 3rem);
+    font-size: clamp(1.3rem, 6.6vw, 2.6rem);
     color: var(--dark);
     position: relative;
     padding-bottom: 0.6rem;
+    margin: 1.5rem 0 0.4rem;
 }
 
 .book.modal h3::before {
@@ -280,7 +281,7 @@ header nav button:hover {
 .book.modal p {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-    margin: 0.5rem 0 1.6rem;
+    margin: 0.5rem 0 0.2rem;
     line-height: 1.5;
     letter-spacing: 0;
     /* max-width: 33rem; */
@@ -644,6 +645,7 @@ section.our_menu {
     position: absolute;
     width: clamp(10rem, 42%, 34rem);
     border-radius: 0.2rem;
+    background-color: #7f8f9980;
 }
 
 .our_menu .video_composition video:nth-of-type(1) {
@@ -677,11 +679,11 @@ section.our_menu {
     font-size: 2rem;
     padding: 0.8rem 2.7rem;
     margin-top: 2.5rem;
-    border-bottom: 0.2rem solid var(--c1a);
+    border-bottom: 0.2rem solid white;
     box-shadow: unset;
-    background-color: white;
+    background-color: var(--c1a);
     border-radius: 0.2rem;
-    color: var(--c1a);
+    color: white;
     font-family: 'Bebas Neue';
     font-weight: 800;
     letter-spacing: 0.1em;
@@ -745,7 +747,7 @@ section.the_road_trip {
     margin: 0 auto;
     left: 0;
     right: 0;
-    font-size: clamp(5rem, 12vw, 9rem);
+    font-size: clamp(5rem, 15vw, 9rem);
     color: var(--light);
     mix-blend-mode: luminosity;
     font-weight: 600;
@@ -833,7 +835,7 @@ section.luxembourg {
     display: flex;
     border-radius: clamp(2rem, 6vw, 3.5rem);
     margin: calc(clamp(3rem, 5vw, 5rem) * -1) 0 0;
-    max-width: 70rem;
+    max-width: 75rem;
     gap: 3rem;
     scroll-snap-type: x mandatory;
     z-index: 1;
@@ -905,17 +907,17 @@ footer {
     min-height: clamp(3rem, 20vw, 10rem);
     background-color: var(--dark);
     color: var(--light);
-    padding: 5rem 2rem;
+    padding: 6rem 2rem 12rem;
     box-sizing: border-box;
     /* text-align: center; */
 }
 
 footer>.ctnr {
-    width: var(--width);
+    width: clamp(10rem, 86vw, 150rem);
     display: flex;
     flex-direction: column;
     /* align-items: center; */
-    gap: 5rem;
+    gap: 8rem;
     margin-inline: auto;
     justify-content: space-between;
 }
@@ -928,7 +930,7 @@ footer .logo {
 footer .logo_nav {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.2rem;
     font-size: 1.8rem;
     letter-spacing: 0.2rem;
 }
@@ -940,8 +942,8 @@ footer .icon {
 } footer .icon::before {
     content:'';
     position: relative;
-    width: 1.7rem;
-    height: 1.7rem;
+    width: 1.5rem;
+    height: 1.5rem;
     display: inline-block;
     margin-right: 1rem;
     /* background-color: white; */
@@ -968,7 +970,7 @@ footer .opening_hours {
     gap: 0.6rem;
 }
 
-footer .opening_hours p {
+.opening_hours p {
     display: flex;
     justify-content: space-between;
     /* max-width: 35rem; */
@@ -976,10 +978,10 @@ footer .opening_hours p {
     gap: 1rem;
 }
 
-footer .opening_hours .divider {
+.opening_hours .divider {
     flex: 1;
     height: 0.1rem;
-    background-color: #fff1;
+    background-color: #6662;
     margin-bottom: 0.3rem;
 }
 
@@ -988,33 +990,33 @@ footer .opening_hours h2 {
     font-family: 'Bebas Neue';
     font-size: 3.6rem;
     letter-spacing: 0.2rem;
-    color: var(--c2);
+    color: var(--grey2);
 }
 
 footer .opening_hours h3 {
     font-weight: 800;
     font-family: 'Bebas Neue';
     margin: 1rem 0 0;
-    font-size: 2.2rem;
+    font-size: 2.1rem;
     letter-spacing: 0.3rem;
 }
 
 footer nav {
     display: flex;
     flex-direction: column;
-    font-size: 2.5rem;
-    gap: 1rem;
+    font-size: 2.4rem;
     letter-spacing: 0.2rem;
     text-align: center;
+    align-items: center;
 }
 
 
 .lang {
     position: fixed;
-    top: 0.4rem;
-    left: 0.4rem;
-    width: 1.6rem;
-    height: 1.6rem;
+    top: 0.6rem;
+    left: 0.5rem;
+    width: 1.9rem;
+    height: 1.9rem;
     background-color: var(--grey2);
     z-index: 2;
     color: var(--light);
@@ -1026,7 +1028,7 @@ footer nav {
     align-items: center;
     justify-content: center;
     letter-spacing: 0.1rem;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
 }
 
 .lang .current {}
@@ -1280,6 +1282,7 @@ footer nav {
 
     footer nav {
         text-align: right;
+        align-items: end;
     }
 
 }

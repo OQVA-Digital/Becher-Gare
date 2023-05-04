@@ -87,20 +87,24 @@
                   <button class="close icon" type="button" title="close"></button>
             </div>
 
-            <div class="book modal">
+            <div class="book modal opening_hours">
                 <p>Le Becher station welcomes you according to the following times:</p>
 
                 <h3>COFFEE</h3>
+    
+                <p><span>Thursday to Saturday</span> <span class="divider"></span> <span>11h00 to 21h30</span> </p>
 
-                <p>Thursday to Saturday 11h00 to 21h30, Sunday 10h00 a.m. to 20h00</p>
+                <p><span>Sunday</span> <span class="divider"></span> <span>10h00 a.m. to 20h00</span></p>
 
                 <h3>RESTAURANT LUNCH</h3>
-
-                <p>Thursday to Sunday 12h00 to 14h00</p>
+    
+                <p><span>Thursday to Sunday</span> <span class="divider"></span> <span>12h00 to 14h00</span></p>
 
                 <h3>RESTAURANT DINNER</h3>
+    
+                <p><span>Thursday to Saturday</span> <span class="divider"></span> <span>19h00 to 21h30</span></p>
 
-                <p>Thursday to Saturday 19h00 to 21h30, Sunday 18h30 to 20h00 (last order)</p>
+                <p><span>Sunday</span> <span class="divider"></span> <span>18h30 to 20h00 (last order)</span></p>
                 
                 <a href="tel:+35226784240">Book now: +352 26 78 42 40</a>
                   
@@ -185,10 +189,19 @@
                 <!-- <img class="composition reveal" src="assets/fine-cuisine.png" alt="Fréderic composition"> -->
 
                 <div class="video_composition">
-                    <video src="assets/video/food/01-min.mp4" muted autoplay loop></video>
-                    <video src="assets/video/food/02-min.mp4" muted autoplay loop></video>
-                    <video src="assets/video/food/03-min.mp4" muted autoplay loop></video>
-                    <img src="assets/compositions/fine-cuisine-lettering.png" alt="">
+                    <video class="lazy" muted autoplay playsinline loop poster="assets/video/food/01-preload.jpg">
+                        <source data-src="assets/video/food/01.mp4">
+                    </video>
+
+                    <video class="lazy" muted autoplay playsinline loop poster="assets/video/food/02-preload.jpg">
+                        <source data-src="assets/video/food/02.mp4">
+                    </video>
+
+                    <video class="lazy" muted autoplay playsinline loop poster="assets/video/food/03-preload.jpg">
+                        <source data-src="assets/video/food/03.mp4">
+                    </video>
+
+                    <img src="assets/compositions/fine-cuisine-lettering.png" alt="Fine Cuisine Lettering">
                 </div>
 
                 <div class="content">
@@ -207,8 +220,8 @@
 
         <section class="the_road_trip" id="the-road-trip">
             <div class="video_ctnr">
-                <video autoplay muted playsinline loop loading="lazy" data-src="assets/video/BecherGare_Driving">
-                    <source src="assets/video/BecherGare_Driving.mp4" type="video/mp4">
+                <video class="lazy" autoplay muted playsinline loop poster="assets/video/BecherGare_Driving_preload.jpg">
+                    <source data-src="assets/video/BecherGare_Driving.mp4" type="video/mp4">
                 </video>
 
                 <h2>The Road Trip</h2>
@@ -298,10 +311,16 @@
     
             <nav>
                 <a href="#about">About us</a>
+                
+                <hr>
     
                 <a href="menu/index.html">Our menu</a>
+                
+                <hr>
     
                 <button class="book_bt" type="button">Book with us</button>
+                
+                <hr>
     
                 <button class="contact_bt" type="button">Contact</button>
             </nav>
