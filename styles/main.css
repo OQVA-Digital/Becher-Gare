@@ -446,7 +446,7 @@ section.intro {
 h1 {
     display: block;
     text-align: center;
-    font-size: clamp(2.5rem, calc(2.5vh + 5vw), 7.2rem);
+    font-size: clamp(2.5rem, calc(2.2vh + 3.8vw), 6.6rem);
     font-weight: 100;
     letter-spacing: 0.03em;
     text-shadow: 0.2rem 0.2rem #0e0a0c5c;
@@ -651,6 +651,7 @@ section.our_menu {
 .our_menu .video_composition video:nth-of-type(1) {
     left: 0;
     top: clamp(3rem, 8vw, 9rem);
+    z-index: 3;
 }
 
 .our_menu .video_composition video:nth-of-type(2) {
@@ -658,11 +659,13 @@ section.our_menu {
     right: 0;
     margin: 0 auto;
     top: 0;
+    z-index: 2;
 }
 
 .our_menu .video_composition video:nth-of-type(3) {
     right: 0;
     top: clamp(6rem, 14vw, 15rem);
+    z-index: 1;
 }
 
 .our_menu .video_composition img {
@@ -670,6 +673,7 @@ section.our_menu {
     width: clamp(5rem, 40%, 28rem);
     left: clamp(3rem, 6vw, 11rem);
     top: clamp(8rem, 16vw, 23rem);
+    z-index: 4;
 }
 
 .our_menu p {}
