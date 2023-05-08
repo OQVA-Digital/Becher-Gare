@@ -46,7 +46,7 @@ window.addEventListener('scroll', function() {
 
 let showingContact = false;
 
-const contactBt = document.querySelector('.contact_bt')
+const contactBt = document.querySelectorAll('.contact_bt')
 const contactModal = document.querySelector('.contact.modal')
 
 function toggleContact() {
@@ -69,7 +69,9 @@ function toggleContact() {
     }
 }
 
-contactBt.addEventListener('click', toggleContact)
+for(i=0;i<contactBt.length;i++) {
+    contactBt[i].addEventListener('click', toggleContact)
+}
 
 let showingBook = false;
 

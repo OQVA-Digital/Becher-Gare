@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <!-- Google tag (gtag.js) -->
@@ -12,10 +12,16 @@
     gtag('config', 'G-NW6ETVB02J');
     </script>
 
+    <script>
+        var video = document.createElement('video');
+        video.src = 'assets/video/BecherGare_Herosection.mp4';
+        video.load();
+    </script>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="content-language" content="en-gb">
+    <meta http-equiv="content-language" content="fr">
     
     <title>Becher Gare: French Cuisine in the heart of Luxembourg</title>
 
@@ -28,17 +34,12 @@
 
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
+    <link rel="preload" href="assets/video/BecherGare_Herosection.mp4" as="video" type="video/mp4">
+
     <script src="scripts/main.js" defer></script>
     <script src="scripts/spin.js" defer></script>
     <script src="scripts/toggle-menu.js" defer></script>
     <script src="scripts/scrollreveal.min.js"></script>
-
-    <!-- <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
-    <script>
-        Weglot.initialize({
-            api_key: 'wg_a0a20829ae61170e6b0fefc977ed61123'
-        });
-    </script> -->
 </head>
 
 <body>
@@ -51,17 +52,17 @@
             </button>
     
             <nav>
-                <a href="#about">About us</a>
+                <a href="#about">À Propos de Nous</a>
     
                 <hr>
     
-                <a href="menu/index.html">Our menu</a>
+                <a href="menu/index.html">Ouvrir le menu</a>
 
                 <div class="divider"></div>
     
                 <hr>
     
-                <button class="book_bt" type="button">Book with us</button>
+                <button class="book_bt" type="button">Réserver</button>
     
                 <hr>
 
@@ -71,16 +72,16 @@
             <div class="contact modal">
                 <form name="basic-contact" method="POST" data-netlify="true">
                     <p>
-                      <label>Your Name: <input type="text" name="name" /></label>
+                      <label>Votre nom: <input type="text" name="name" /></label>
                     </p>
                     <p>
-                      <label>Your Email: <input type="email" name="email" /></label>
+                      <label>Votre e-mail: <input type="email" name="email" /></label>
                     </p>
                     <p>
                       <label>Message: <textarea name="message"></textarea></label>
                     </p>
                     <p>
-                      <button type="submit">Send</button>
+                      <button type="submit">Envoyer</button>
                     </p>
                   </form>
                   
@@ -131,7 +132,8 @@
         <section class="intro">
             
             <div class="video_ctnr">
-                <video autoplay muted playsinline loop loading="lazy"  poster="assets/video/intro_preload.jpg">
+                <video autoplay muted playsinline loop poster="assets/video/intro_preload.jpg">
+                    <!-- <source src="assets/video/BecherGare_Herosection.webm" type="video/webm"> -->
                     <source src="assets/video/BecherGare_HeroSection.mp4" type="video/mp4">
                 </video>
 
@@ -140,7 +142,7 @@
 
             <div class="content reveal">
                 
-                <h1><b>Discover the ultimate destination</b> for classic car enthusiasts and food lovers in the heart of Europe: <strong>Becher Gare</strong>.</h1>
+                <h1><b>Découvrez la destination</b> ultime pour les passionnés de voitures classiques et les amoureux de la gastronomie au cœur de l'Europe : <strong>Becher Gare</strong>.</h1>
 
                 <address>
                     <div class="icon"></div>
@@ -148,9 +150,9 @@
                 </address>
 
                 <div class="cta_ctnr">
-                    <a href="menu/index.html" class="menu">Open menu</a>
+                    <a href="menu/index.html" class="menu">Ouvrir le menu</a>
 
-                    <button type="button" class="book book_bt">Book now</button>
+                    <button type="button" class="book book_bt">Réserver</button>
                 </div>
 
                 <a href="#about" class="fold">
@@ -165,29 +167,27 @@
                 <picture class="composition reveal" loading="lazy">
                     <source srcset="assets/compositions/meet-frederic.webp" type="image/webp">
                     <source srcset="assets/compositions/meet-frederic.png" type="image/png">
-                    <img src="assets/compositions/meet-frederic.png" alt="Meet Frédéric" draggable="false">
+                    <img src="assets/compositions/meet-frederic.png" alt="Meet Frédéric" draggable="false" loading="lazy">
                 </picture>
 
                 <div class="content">
-                    <h2>Meet <span>Frédéric</span></h2>
+                    <h2>Rencontrez <span>Frédéric:</span></h2>
     
-                    <p>Frédéric, the owner and head chef of <strong>Becher Gare</strong>, has a passion for both cooking and classic cars.</p>
+                    <p>Frédéric, le propriétaire et chef cuisinier du <strong>Becher Gare</strong>, est passionné à la fois par la cuisine et les voitures classiques.</p>
     
-                    <p>Born and raised in France, Frédéric developed an early appreciation for the beauty and simplicity of French cuisine.</p>
+                    <p>Né et élevé en France, Frédéric a développé très tôt une appréciation pour la beauté et la simplicité de la cuisine française.</p>
     
-                    <p><b>After years of training and experience in some of the best kitchens in Europe</b>, Frédéric migrated to Luxembourg to take over Becher Gare, a restaurant that showcases the best of French and Luxembourgish cuisine in the heart of Europe.</p>
+                    <p><b>Après des années de formation et d'expérience dans certains des meilleurs restaurants d'Europe</b>, Frédéric a migré au Luxembourg pour prendre les rênes du Becher Gare, un restaurant qui met en valeur le meilleur de la cuisine française et luxembourgeoise au cœur de l'Europe.</p>
     
-                    <p><b>Frédéric's culinary philosophy is simple: use the highest quality ingredients to create dishes that are both delicious and authentic.</b> When he's not in the kitchen, Frédéric can often be found tinkering with his classic cars or exploring the Luxembourgian countryside on a road trip.</p>
+                    <p><b>La philosophie culinaire de Frédéric est simple : utiliser des ingrédients de la plus haute qualité pour créer des plats à la fois délicieux et authentiques.</b> Lorsqu'il n'est pas en cuisine, on peut souvent trouver Frédéric en train de bricoler ses voitures classiques ou d'explorer la campagne luxembourgeoise lors d'un voyage en voiture.</p>
     
-                    <p><strong>Join Frédéric at Becher Gare for a unique dining experience that combines his love of food and classic cars in a beautiful rural setting.</strong></p>
+                    <p><strong>Rejoignez Frédéric au Becher Gare pour une expérience culinaire unique qui combine son amour de la cuisine et des voitures classiques dans un cadre rural magnifique.</strong></p>
                 </div>
             </div>
         </section>
 
         <section class="our_menu">
             <div class="width">
-                <!-- <img class="composition reveal" src="assets/fine-cuisine.png" alt="Fréderic composition"> -->
-
                 <div class="video_composition">
                     <video class="lazy" muted autoplay playsinline loop poster="assets/video/food/01-preload.jpg">
                         <source data-src="assets/video/food/01.mp4">
@@ -201,17 +201,17 @@
                         <source data-src="assets/video/food/03.mp4">
                     </video>
 
-                    <img src="assets/compositions/fine-cuisine-lettering.png" alt="Fine Cuisine Lettering">
+                    <img src="assets/compositions/fine-cuisine-lettering.png" alt="Fine Cuisine Lettering" loading="lazy">
                 </div>
 
                 <div class="content">
-                    <h2>Our <span>Menu</span></h2>
+                    <h2>Notre <span>Menu</span></h2>
     
-                    <p>At Becher Gare, our menu showcases <strong>the best of French and Luxembourgian cuisine</strong>, with a focus on fresh, seasonal ingredients.</p>
+                    <p>Au Becher Gare, notre menu met en valeur <strong>le meilleur de la cuisine française et luxembourgeoise</strong>, en mettant l'accent sur des ingrédients frais et de saison.</p>
 
-                    <p>From traditional favorites like escargots and coq au vin, foie gras to vegan options, our menu has <b>something for everyone.</b></p>
+                    <p>Des classiques traditionnels tels que les escargots et le coq au vin, le foie gras aux options végétaliennes, <b>notre menu propose quelque chose pour tout le monde.</b></p>
 
-                    <p><b>Don't forget to ask our knowledgeable staff for wine pairing suggestions to enhance your dining experience.</b></p>
+                    <p><b>N'oubliez pas de demander à notre personnel compétent des suggestions d'accords mets et vins pour enrichir votre expérience culinaire.</b></p>
 
                     <a href="./menu/index.html">Open menu</a>
                 </div>
@@ -224,18 +224,18 @@
                     <source data-src="assets/video/BecherGare_Driving.mp4" type="video/mp4">
                 </video>
 
-                <h2>The Road Trip</h2>
+                <h2>Le Road Trip</h2>
             </div>
 
             <div class="width">
-                <img class="composition reveal" src="assets/memorable-dining.png" alt="Fréderic composition">
+                <img class="composition reveal" src="assets/memorable-dining.png" alt="Fréderic composition" loading="lazy">
 
                 <div class="content">    
-                    <p>Hit the road and discover the beauty of Luxembourg's countryside, from rolling hills to picturesque vineyards.</p>
+                    <p>Prenez la route et découvrez la beauté de la campagne luxembourgeoise, des collines verdoyantes aux vignobles pittoresques.</p>
 
-                    <p>As a <strong>destination for classic car enthusiasts</strong>, we offer ample parking space and welcome vintage vehicles of all makes and models.</p>
+                    <p>En tant que <strong>destination pour les passionnés de voitures classiques</strong>, nous offrons un espace de stationnement suffisant et accueillons les véhicules anciens de toutes marques et modèles.</p>
 
-                    <p><strong>Enjoy the journey and make a stop at Becher Gare for a truly memorable dining experience.</strong></p>
+                    <p><strong>Profitez du voyage et faites un arrêt au Becher Gare pour une expérience culinaire vraiment mémorable.</strong></p>
 
                     <div class="cta_ctnr">
                         <button type="button" class="cta book_bt">Book meal</button>
@@ -258,11 +258,11 @@
                 <div class="content">
                     <h2>Luxembourg</h2>
     
-                    <p>Luxembourg is a hidden gem in the heart of Europe, with a rich history and unique cultural influences.</p>
+                    <p>Le Luxembourg est un joyau caché au cœur de l'Europe, avec une histoire riche et des influences culturelles uniques.</p>
     
-                    <p><strong>Explore the country's charming villages, historic castles, and stunning natural landscapes during your visit.</strong></p>
+                    <p><strong>Explorez les charmants villages, les châteaux historiques et les paysages naturels époustouflants du pays lors de votre visite.</strong></p>
     
-                    <p>Don't miss the opportunity to experience the best of Luxembourgish cuisine at <strong>Becher Gare, the ultimate dining destination in the country.</strong></p>
+                    <p>Ne manquez pas l'occasion de découvrir le meilleur de la cuisine luxembourgeoise au <strong>Becher Gare, la destination ultime pour dîner dans le pays.</strong></p>
                 </div>
             </div>
         </section>
@@ -288,37 +288,37 @@
             </div>
         
             <div class="opening_hours">
-                <h2>Opening Times</h2>
+                <h2>Heures D’ouverture</h2>
 
-                <p>Le Becher station welcomes you according to the following times:</p>
+                <p>Le Becher gare vous accueille selon les horaires suivants:</p>
     
-                <h3>COFFEE</h3>
+                <h3>CAFÉ</h3>
     
-                <p><span>Thursday to Saturday</span> <span class="divider"></span> <span>11h00 to 21h30</span> </p>
+                <p><span>Jeudi au samedi</span> <span class="divider"></span> <span>11h00 à 21h30</span> </p>
 
-                <p><span>Sunday</span> <span class="divider"></span> <span>10h00 to 20h00</span></p>
+                <p><span>Dimanche</span> <span class="divider"></span> <span>10h00 à 20h00</span></p>
     
                 <h3>RESTAURANT LUNCH</h3>
     
-                <p><span>Thursday to Sunday</span> <span class="divider"></span> <span>12h00 to 14h00</span></p>
+                <p><span>Jeudi au dimanche</span> <span class="divider"></span> <span>12h00 à 14h00</span></p>
     
-                <h3>RESTAURANT DINNER</h3>
+                <h3>RESTAURANT DÎNER</h3>
     
-                <p><span>Thursday to Saturday</span> <span class="divider"></span> <span>19h00 to 21h30</span></p>
+                <p><span>Jeudi au samedi</span> <span class="divider"></span> <span>19h00 à 21h30</span></p>
 
-                <p><span>Sunday</span> <span class="divider"></span> <span>18h30 to 20h00 (last order)</span></p>
+                <p><span>Sunday</span> <span class="divider"></span> <span>18h30 à 20h00 (dernière commande)</span></p>
             </div>
     
             <nav>
-                <a href="#about">About us</a>
+                <a href="#about">À Propos de Nous</a>
                 
                 <hr>
     
-                <a href="menu/index.html">Our menu</a>
+                <a href="menu/index.html">Ouvrir le menu</a>
                 
                 <hr>
     
-                <button class="book_bt" type="button">Book with us</button>
+                <button class="book_bt" type="button">Réserver</button>
                 
                 <hr>
     
@@ -327,7 +327,7 @@
         </div>
     </footer>
 
-    <a class="lang" a href="./index.html" title="Change to french">FR</a>
+    <a class="lang" a href="en/index.html" title="Passer à l'anglais">EN</a>
 </body>
 
 </html>
