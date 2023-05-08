@@ -12,11 +12,11 @@
     gtag('config', 'G-NW6ETVB02J');
     </script>
 
-<script>
-    var video = document.createElement('video');
-    video.src = '../assets/video/BecherGare_Herosection.mp4';
-    video.load();
-</script>
+    <script>
+        var video = document.createElement('video');
+        video.src = '../assets/video/BecherGare_Herosection.mp4';
+        video.load();
+    </script>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -40,6 +40,7 @@
     <script src="../scripts/spin.js" defer></script>
     <script src="../scripts/toggle-menu.js" defer></script>
     <script src="../scripts/scrollreveal.min.js"></script>
+    <script src="../scripts/form.js" defer></script>
 
     <!-- <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
     <script>
@@ -59,33 +60,35 @@
             </button>
     
             <nav>
-                <a href="#about">About us</a>
+                <div>
+                    <a href="#about">About us</a>
+        
+                    <hr>
+        
+                    <a href="menu/index.html">Our menu</a>
+                </div>
     
                 <hr>
     
-                <a href="menu/index.html">Our menu</a>
-
-                <div class="divider"></div>
+                <div>
+                    <button class="book_bt" type="button">Book with us</button>
+        
+                    <hr>
     
-                <hr>
-    
-                <button class="book_bt" type="button">Book with us</button>
-    
-                <hr>
-
-                <button class="contact_bt" type="button">Contact</button>
+                    <button class="contact_bt" type="button">Contact</button>
+                </div>
             </nav>
 
             <div class="contact modal">
                 <form name="basic-contact" method="POST" data-netlify="true">
                     <p>
-                      <label>Your Name: <input type="text" name="name" /></label>
+                      <label>Your Name: <input type="text" name="name" required/></label>
                     </p>
                     <p>
-                      <label>Your Email: <input type="email" name="email" /></label>
+                      <label>Your Email: <input type="email" name="email" required/></label>
                     </p>
                     <p>
-                      <label>Message: <textarea name="message"></textarea></label>
+                      <label>Message: <textarea name="message" required></textarea></label>
                     </p>
                     <p>
                       <button type="submit">Send</button>
@@ -157,9 +160,9 @@
                 </address>
 
                 <div class="cta_ctnr">
-                    <a href="menu/index.html" class="menu">Open menu</a>
+                    <a href="menu/index.html" class="cta menu">Open menu</a>
 
-                    <button type="button" class="book book_bt">Book now</button>
+                    <button type="button" class="cta book book_bt">Book now</button>
                 </div>
 
                 <a href="#about" class="fold">
@@ -222,7 +225,7 @@
 
                     <p><b>Don't forget to ask our knowledgeable staff for wine pairing suggestions to enhance your dining experience.</b></p>
 
-                    <a href="./menu/index.html">Open menu</a>
+                    <a class="cta" href="./menu/index.html">Open menu</a>
                 </div>
             </div>
         </section>

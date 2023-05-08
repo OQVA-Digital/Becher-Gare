@@ -40,6 +40,7 @@
     <script src="scripts/spin.js" defer></script>
     <script src="scripts/toggle-menu.js" defer></script>
     <script src="scripts/scrollreveal.min.js"></script>
+    <script src="scripts/form.js" defer></script>
 </head>
 
 <body>
@@ -52,33 +53,35 @@
             </button>
     
             <nav>
-                <a href="#about">À Propos de Nous</a>
-    
-                <hr>
-    
-                <a href="menu/index.html">Ouvrir le menu</a>
-
-                <div class="divider"></div>
-    
-                <hr>
-    
-                <button class="book_bt" type="button">Réserver</button>
+                <div>
+                    <a href="#about">À Propos de Nous</a>
+        
+                    <hr>
+        
+                    <a href="menu/index.html">Ouvrir le menu</a>
+                </div>
     
                 <hr>
 
-                <button class="contact_bt" type="button">Contact</button>
+                <div>
+                    <button class="book_bt" type="button">Réserver</button>
+        
+                    <hr>
+    
+                    <button class="contact_bt" type="button">Contact</button>
+                </div>
             </nav>
 
             <div class="contact modal">
                 <form name="basic-contact" method="POST" data-netlify="true">
                     <p>
-                      <label>Votre nom: <input type="text" name="name" /></label>
+                      <label>Votre nom: <input type="text" name="name" required/></label>
                     </p>
                     <p>
-                      <label>Votre e-mail: <input type="email" name="email" /></label>
+                      <label>Votre e-mail: <input type="email" name="email" required/></label>
                     </p>
                     <p>
-                      <label>Message: <textarea name="message"></textarea></label>
+                      <label>Message: <textarea name="message" required></textarea></label>
                     </p>
                     <p>
                       <button type="submit">Envoyer</button>
@@ -150,9 +153,9 @@
                 </address>
 
                 <div class="cta_ctnr">
-                    <a href="menu/index.html" class="menu">Ouvrir le menu</a>
+                    <a href="menu/index.html" class="cta menu">Ouvrir le menu</a>
 
-                    <button type="button" class="book book_bt">Réserver</button>
+                    <button type="button" class="cta book book_bt">Réserver</button>
                 </div>
 
                 <a href="#about" class="fold">
@@ -213,7 +216,7 @@
 
                     <p><b>N'oubliez pas de demander à notre personnel compétent des suggestions d'accords mets et vins pour enrichir votre expérience culinaire.</b></p>
 
-                    <a href="./menu/index.html">Open menu</a>
+                    <a class="cta" href="./menu/index.html">Open menu</a>
                 </div>
             </div>
         </section>
