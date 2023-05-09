@@ -132,6 +132,22 @@ header nav button:hover {
     color: white;
 }
 
+.award {
+    background-color: #ffdb00;
+    position: absolute;
+    height: clamp(2.5rem, 4vw, 3rem);
+    width: fit-content;
+    padding: clamp(0.5rem, 1vw, 0.8rem);
+    left: -4%;
+    bottom: 0;
+    border-radius: 0.4rem;
+    display: flex;
+    z-index: 4;
+    transform: translateY(calc(100% + 1.2rem));
+    border: 0.1rem solid var(--dark);
+    box-shadow: 0 0.1rem 0 0.1rem var(--dark);
+}
+
 .modal {
     position: absolute;
     right: 0;
@@ -375,16 +391,17 @@ header .social {
     justify-content: center;
     /* height: 60%; */
     align-items: center;
-    transform: translateY(clamp(3rem, 10vw, 5rem));
+    transform: translateY(calc(100% + 1.2rem));
+    z-index: 4;
 }
 
 header .social .icon {
-    width: clamp(2.3rem, 6.5vw, 2.7rem);
-    height: clamp(2.3rem, 6.5vw, 2.7rem);
+    width: clamp(2.3rem, 6.2vw, 2.7rem);
+    height: clamp(2.3rem, 6.2vw, 2.7rem);
     background-color: var(--grey2);
     border-radius: 0.3rem;
     background-size: 60%;
-    border: 0.2rem solid #ffffff33;
+    border: 0.1rem solid #ffffff33;
 }
 
 header .icon.instagram {
@@ -1179,6 +1196,12 @@ footer nav {
         flex-direction: revert;
         /* transform: unset; */
         right: 0;
+        transform: translateY(50%);
+    }
+
+    .award {
+        left:0;
+        transform: translateY(50%);
     }
 
     header nav .divider {
