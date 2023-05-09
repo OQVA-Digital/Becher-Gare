@@ -421,7 +421,6 @@ section.intro {
     background-color: #141110;
     color: var(--light);
     font-weight: 400;
-    background-image: url(../assets/video/intro_preload.jpg);
     background-position: 60% center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -443,7 +442,7 @@ section.intro {
 }
 
 .intro .content {
-    width: clamp(10rem, 90vw, 110rem);
+    width: clamp(10rem, 90vw, 112rem);
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -460,7 +459,7 @@ section.intro {
 h1 {
     display: block;
     text-align: center;
-    font-size: clamp(2.5rem, calc(1.9vh + 3.8vw), 5.9rem);
+    font-size: clamp(2.5rem, calc(1.9vh + 3.8vw), 5.5rem);
     font-weight: 100;
     letter-spacing: 0.03em;
     text-shadow: 0.2rem 0.2rem #0e0a0c5c;
@@ -597,6 +596,7 @@ section.meet_frederic {
     display: flex;
     flex-flow: row wrap;
     align-items: baseline;
+    column-gap: 1rem;
 }
 
 .meet_frederic h2 span {
@@ -757,7 +757,7 @@ section.the_road_trip {
     height: 100%;
     width: 100vw;
     object-fit: cover;
-    background-color: var(--c1);
+    background-color: #51594e;
 }
 
 .the_road_trip h2 {
@@ -1049,7 +1049,11 @@ footer nav {
     align-items: center;
     justify-content: center;
     letter-spacing: 0.1rem;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+.lang:hover {
+    border-color:white;
 }
 
 .lang .current {}
@@ -1145,7 +1149,7 @@ footer nav {
     header nav > div {
         flex-flow: row wrap;
         position: absolute;
-        column-gap: 3rem;
+        column-gap: 4rem;
         row-gap: 1rem;
     } header nav > div:first-of-type {
         right: calc(50% + calc(clamp(25rem, 69vw, 34rem) / 1.5));

@@ -90,7 +90,7 @@ introVideo.addEventListener('loadeddata', function() {
 var slideUp = {
     opacity: 0,
     duration:1200,
-    distance:'-1.5rem',
+    distance:'1.5rem',
     easing: 'ease-in-out',
     viewOffset: {
         top: 0,
