@@ -135,8 +135,6 @@ header nav button:hover {
 .award {
     background-color: #ffdb00;
     position: absolute;
-    height: clamp(2.5rem, 4vw, 3rem);
-    width: fit-content;
     padding: clamp(0.5rem, 1vw, 0.8rem);
     left: -4%;
     bottom: 0;
@@ -146,6 +144,9 @@ header nav button:hover {
     transform: translateY(calc(100% + 1.2rem));
     border: 0.1rem solid var(--dark);
     box-shadow: 0 0.1rem 0 0.1rem var(--dark);
+    width: fit-content;
+} .award img {
+    width: clamp(2.5rem, 11vw, 5rem);
 }
 
 .modal {
