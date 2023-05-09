@@ -459,7 +459,7 @@ section.intro {
 h1 {
     display: block;
     text-align: center;
-    font-size: clamp(2.5rem, calc(1.9vh + 3.8vw), 5.5rem);
+    font-size: clamp(2.5rem, calc(1.9vh + 3.8vw), 5rem);
     font-weight: 100;
     letter-spacing: 0.03em;
     text-shadow: 0.2rem 0.2rem #0e0a0c5c;
@@ -469,7 +469,7 @@ h1 {
     text-align: center;
     font-size: clamp(1.1rem, 3.3vw, 1.6rem);
     letter-spacing: 0.4rem;
-    font-weight: 400;
+    font-weight: 600;
     display: flex;
     gap: 0.8rem;
     align-items: center;
@@ -520,9 +520,9 @@ address .icon {
 .our_menu a,
 .cta_ctnr button {
     width: fit-content;
-    padding: 0.8rem 2rem;
-    font-weight: 400;
-    font-size: clamp(1.6rem, 4.2vw, 1.9rem);
+    padding: 1rem 2rem;
+    font-weight: 800;
+    font-size: clamp(1.6rem, 4.4vw, 1.9rem);
     letter-spacing: 0.11em;
     border-bottom: 0.2rem solid var(--lightgrey2);
     /* box-shadow: 0 0.6rem 1.2rem -0.4rem rgb(28 34 38 / 60%); */
@@ -1006,7 +1006,7 @@ footer .opening_hours {
     height: 0.1rem;
     background-color: #6662;
     margin-bottom: 0.3rem;
-    min-width: 4rem;
+    min-width: 1rem;
 }
 
 footer .opening_hours h2 {
