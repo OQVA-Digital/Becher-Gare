@@ -999,11 +999,14 @@ footer .opening_hours {
     gap: 1rem;
 }
 
+.opening_hours p span:last-child {text-align: right;}
+
 .opening_hours .divider {
     flex: 1;
     height: 0.1rem;
     background-color: #6662;
     margin-bottom: 0.3rem;
+    min-width: 4rem;
 }
 
 footer .opening_hours h2 {
