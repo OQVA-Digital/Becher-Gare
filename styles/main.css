@@ -417,7 +417,7 @@ header .icon.facebook {
 
 section.intro {
     height: clamp(50rem, calc(55vh + 65vw + 9rem), 98rem);
-    max-height: 95vh;
+    max-height: 100vh;
     background-color: #141110;
     color: var(--light);
     font-weight: 400;
@@ -438,7 +438,7 @@ section.intro {
 }
 
 .intro .video_ctnr video {
-    object-position: 23% 11rem;
+    object-position: 23% 0;
 }
 
 .intro .content {
@@ -459,7 +459,7 @@ section.intro {
 h1 {
     display: block;
     text-align: center;
-    font-size: clamp(2.5rem, calc(1.9vh + 3.8vw), 5rem);
+    font-size: clamp(2.5rem, calc(2.2vh + 3.8vw), 5rem);
     font-weight: 100;
     letter-spacing: 0.03em;
     text-shadow: 0.2rem 0.2rem #0e0a0c5c;
@@ -547,7 +547,7 @@ address .icon {
 section.meet_frederic {
     padding: clamp(3rem, 7vw, 6rem) 0 clamp(3rem, 16vw, 14rem);
     background-color: var(--light);
-    scroll-margin-top: 12rem;
+    scroll-margin-top: 22rem;
 }
 
 .meet_frederic .width,
@@ -789,7 +789,7 @@ section.the_road_trip {
     flex-flow: row wrap;
 }
 
-.the_road_trip .composition {
+.the_road_trip .composition, .meet_frederic .composition {
     margin-top: calc(clamp(10rem, calc(24vh + 12vw - 14rem), 16rem) * -1);
     z-index: 1;
 }

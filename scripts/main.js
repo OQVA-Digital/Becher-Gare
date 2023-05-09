@@ -89,13 +89,13 @@ introVideo.addEventListener('loadeddata', function() {
 
 var slideUp = {
     opacity: 0,
-    duration:1200,
-    distance:'1.5rem',
+    duration:900,
+    distance:'1.2rem',
     easing: 'ease-in-out',
     viewOffset: {
         top: 0,
         right: 0,
-        bottom: window.innerHeight / 14,
+        bottom: window.innerHeight / 5,
         left: 0,
     },
     interval: 200,
