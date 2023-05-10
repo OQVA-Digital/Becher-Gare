@@ -335,11 +335,12 @@ header nav button:hover {
     background-color: var(--c1a);
     color: white;
     font-weight: 800;
-    padding: 1rem 0;
+    padding: 1.2rem 0 1rem;
     border-radius: 0.2rem;
     border-bottom: 0.5rem solid #742f35;
     letter-spacing: 0.1em;
-    font-size: 2rem;
+    font-size: clamp(1.6rem, 4.5vw, 2rem);
+    white-space: pre-line;
 }
 
 header .icon.tel::before {
