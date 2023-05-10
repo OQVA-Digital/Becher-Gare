@@ -49,7 +49,7 @@ header nav {
     text-align: center;
 }
 
-header nav > div {
+header nav>div {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -67,7 +67,8 @@ header nav.show {
     transform: translateY(-6rem);
 }
 
-header nav hr, footer nav hr {
+header nav hr,
+footer nav hr {
     width: 2rem;
     border: unset;
     border-top: 0.1rem solid #556a76;
@@ -145,7 +146,9 @@ header nav button:hover {
     border: 0.1rem solid var(--dark);
     box-shadow: 0 0.1rem 0 0.1rem var(--dark);
     width: fit-content;
-} .award img {
+}
+
+.award img {
     width: clamp(2.5rem, 11vw, 5rem);
 }
 
@@ -194,12 +197,12 @@ header nav button:hover {
     position: absolute;
     right: 0;
     top: 0;
-    width: clamp(3rem, 10vw, 5rem);
-    height: clamp(3rem, 10vw, 5rem);
+    width: clamp(3rem, 10vw, 3.5rem);
+    height: clamp(3rem, 10vw, 3.5rem);
     /* background-color: var(--lightgrey); */
     /* border-radius: 1.2rem 0 0.4rem 0; */
     background-image: url(../assets/icons/close.svg);
-    background-size: 1.4rem;
+    background-size: 1.2rem;
     cursor: pointer;
 }
 
@@ -319,6 +322,24 @@ header nav button:hover {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+}
+
+.direct_contact_bts {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.direct_contact_bts a {
+    text-align: center;
+    background-color: var(--c1a);
+    color: white;
+    font-weight: 800;
+    padding: 1rem 0;
+    border-radius: 0.2rem;
+    border-bottom: 0.5rem solid #742f35;
+    letter-spacing: 0.1em;
+    font-size: 2rem;
 }
 
 header .icon.tel::before {
@@ -470,8 +491,10 @@ section.intro {
 
 .cta {
     transition: filter 0.15s ease;
-} .cta:hover {
-    filter:brightness(1.2);
+}
+
+.cta:hover {
+    filter: brightness(1.2);
 }
 
 h1 {
@@ -807,7 +830,8 @@ section.the_road_trip {
     flex-flow: row wrap;
 }
 
-.the_road_trip .composition, .meet_frederic .composition {
+.the_road_trip .composition,
+.meet_frederic .composition {
     margin-top: calc(clamp(10rem, calc(24vh + 12vw - 14rem), 16rem) * -1);
     z-index: 1;
 }
@@ -978,8 +1002,10 @@ footer .icon {
     background-position: left;
     display: flex;
     align-items: center;
-} footer .icon::before {
-    content:'';
+}
+
+footer .icon::before {
+    content: '';
     position: relative;
     width: 1.5rem;
     height: 1.5rem;
@@ -993,9 +1019,13 @@ footer .icon {
 
 footer .tel.icon::before {
     background-image: url(../assets/icons/tel.svg);
-} footer .facebook.icon::before {
+}
+
+footer .facebook.icon::before {
     background-image: url(../assets/icons/facebook.svg);
-} footer .instagram.icon::before {
+}
+
+footer .instagram.icon::before {
     background-image: url(../assets/icons/instagram.svg);
 }
 
@@ -1017,7 +1047,9 @@ footer .opening_hours {
     gap: 1rem;
 }
 
-.opening_hours p span:last-child {text-align: right;}
+.opening_hours p span:last-child {
+    text-align: right;
+}
 
 .opening_hours .divider {
     flex: 1;
@@ -1073,8 +1105,9 @@ footer nav {
     font-size: 1.5rem;
     font-weight: 800;
 }
+
 .lang:hover {
-    border-color:white;
+    border-color: white;
 }
 
 .lang .current {}
@@ -1167,15 +1200,19 @@ footer nav {
         max-width: unset;
     }
 
-    header nav > div {
+    header nav>div {
         flex-flow: row wrap;
         position: absolute;
         column-gap: 4rem;
         row-gap: 1rem;
-    } header nav > div:first-of-type {
+    }
+
+    header nav>div:first-of-type {
         right: calc(50% + calc(clamp(25rem, 69vw, 34rem) / 1.5));
         justify-content: right;
-    } header nav > div:last-of-type {
+    }
+
+    header nav>div:last-of-type {
         left: calc(50% + calc(clamp(25rem, 69vw, 34rem) / 1.5));
         justify-content: left;
     }
@@ -1201,7 +1238,7 @@ footer nav {
     }
 
     .award {
-        left:0;
+        left: 0;
         transform: translateY(50%);
     }
 
