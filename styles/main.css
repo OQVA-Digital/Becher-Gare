@@ -456,8 +456,7 @@ header .icon.facebook {
 
 
 section.intro {
-    height: clamp(50rem, calc(55vh + 65vw + 9rem), 98rem);
-    max-height: 100vh;
+    height: clamp(50rem, calc(55vh + 65vw + 9rem), 78rem);
     background-color: #141110;
     color: var(--light);
     font-weight: 400;
@@ -482,7 +481,7 @@ section.intro {
 }
 
 .intro .content {
-    width: clamp(10rem, 90vw, 112rem);
+    width: clamp(10rem, 84vw, 84rem);
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -501,7 +500,7 @@ section.intro {
 h1 {
     display: block;
     text-align: center;
-    font-size: clamp(2.5rem, calc(2.2vh + 3.8vw), 5rem);
+    font-size: clamp(2.5rem, calc(0.8vh + 1.4vw + 2rem), 4.2rem);
     font-weight: 100;
     letter-spacing: 0.03em;
     text-shadow: 0.2rem 0.2rem #0e0a0c5c;
@@ -800,6 +799,7 @@ section.the_road_trip {
     width: 100vw;
     object-fit: cover;
     background-color: #51594e;
+    opacity: 0.6;
 }
 
 .the_road_trip h2 {
