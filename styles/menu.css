@@ -57,6 +57,7 @@ header .logo {
     border-radius: 0.2rem;
     z-index: 4;
     border: 0.1rem solid #fff3;
+    font-size: 1.1rem;
 }
 
 
@@ -74,12 +75,11 @@ main {
 }
 
 h1 {
-    font-size: clamp(1.5rem, 14vw, 7rem);
+    font-size: clamp(1.5rem, 11vw, 6rem);
     font-weight: 700;
     text-align: center;
     margin: clamp(2rem, calc(2vh + 2vw), 4rem) 0;
     color: var(--c1a);
-    font-family: 'Bebas Neue';
 }
 
 h1 span {
@@ -102,14 +102,9 @@ section h2 {
     background-color: white;
     position: sticky;
     top: 0;
-    /* text-decoration: underline; */
-    /* text-underline-offset: 0.8rem; */
-    /* text-decoration-color: var(--c1a); */
-    font-family: 'Bebas Neue';
-    font-weight: 900;
-    font-size: clamp(3.5rem, 5vw, 4rem);
+    font-weight: 700;
+    font-size: clamp(2.5rem, 8vw, 3.5rem);
     margin-bottom: 1rem;
-    /* backdrop-filter: blur(1rem); */
     z-index: 4;
 }
 
@@ -258,7 +253,7 @@ article>div {
 article>div hr {
     flex: 1;
     border: none;
-    border-bottom: 0.25rem dotted var(--light);
+    border-bottom: 0.25rem dotted #EEE;
     min-width: 3rem;
 }
 
@@ -278,9 +273,10 @@ article>div hr {
 .obs {
     font-weight: 600;
     font-style: italic;
-    color: var(--c1a);
+    color: var(--c1b);
     text-align: center;
     line-height: 1.4;
+    letter-spacing: 0.1rem;
 }
 
 .catalogue .variation {

@@ -7,7 +7,8 @@ main>section {
 
 header {
     /* height: clamp(9rem, calc(9vw + 10vh), 14rem); */
-    background-color: rgb(51 63 70 / 91%);
+    background-color: var(--dark);
+    background-image: url(../assets/textures/dark-paper.jpg);
     width: 100%;
     display: flex;
     justify-content: center;
@@ -18,32 +19,36 @@ header {
     transition: transform 0.3s ease;
     position: fixed;
     top: 0;
-    height: clamp(12rem, 20vw, 12rem);
+    height: clamp(10rem, 30vw, 12rem);
     backdrop-filter: blur(0.5rem);
     will-change: transform;
     box-shadow: 0 1.5rem 2rem #0004;
+    /* border-radius: 0 0 0.9rem 0.9rem; */
+    /* left: 0; */
+    /* right: 0; */
+    /* margin-inline: auto; */
 }
 
 header nav {
     position: absolute;
     top: 100%;
     width: fit-content;
-    background-color: var(--grey2);
+    background-color: var(--dark);
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     align-items: center;
     justify-content: center;
     padding: 3.5rem 0;
-    width: clamp(10rem, 55vw, 30rem);
-    font-size: clamp(1rem, 6vw, 2.3rem);
+    width: clamp(10rem, 60vw, 30rem);
+    font-size: clamp(1rem, 4vw, 1.7rem);
     letter-spacing: 0.1em;
     /* border-top: 0.1rem solid var(--lightgrey); */
     transition: transform 0.4s ease, opacity 0.1s ease, visibility 0.1s ease;
     transform: translateY(-7rem);
     opacity: 0;
     visibility: hidden;
-    z-index: 4;
+    z-index: 5;
     border-radius: 0.6rem;
     max-width: 40rem;
     text-align: center;
@@ -106,8 +111,8 @@ header .tel {
     font-weight: 500;
     position: absolute;
     bottom: 0;
-    transform: translateY(140%);
-    font-size: clamp(1rem, 4vw, 1.6rem);
+    transform: translateY(160%);
+    font-size: clamp(1rem, 3vw, 1.2rem);
     letter-spacing: clamp(0.1em, 0.6vw, 0.2em);
     width: fit-content;
     margin: 0 auto;
@@ -119,6 +124,7 @@ header .tel {
     display: flex;
     align-items: center;
     gap: 0.8rem;
+    z-index: 4;
 }
 
 header nav a,
@@ -149,7 +155,7 @@ header nav button:hover {
 }
 
 .award img {
-    width: clamp(2.5rem, 11vw, 5rem);
+    width: clamp(2.5rem, 10vw, 5rem);
 }
 
 .modal {
@@ -177,6 +183,7 @@ header nav button:hover {
     max-height: 70vh;
     box-shadow: 0 1rem 5rem -2rem var(--grey);
     border: 0.2rem solid var(--c1a);
+    background-image: url(../assets/textures/white-paper.jpg);
 }
 
 .modal::before {
@@ -189,8 +196,9 @@ header nav button:hover {
     left: 0;
     right: 0;
     margin-inline: auto;
-    transform: translateY(-50%) rotate(45deg);
-    z-index: -1;
+    transform: translateY(-48%) rotate(45deg);
+    background-image: url(../assets/textures/white-paper.jpg);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 100%);
 }
 
 .modal .close {
@@ -280,16 +288,14 @@ header nav button:hover {
     color: white;
     text-align: center;
     padding: 1rem 0;
-    letter-spacing: 0.2rem;
     border-radius: 0.2rem;
-    font-weight: 800;
-    font-size: clamp(1.8rem, 4.7vw, 2.1rem);
     border-bottom: 0.4rem solid var(--c1);
     margin-top: 2rem;
+    width: 100%;
 }
 
 .book.modal h3 {
-    font-size: clamp(1.3rem, 6.6vw, 2.6rem);
+    font-size: clamp(1.3rem, 6.6vw, 2rem);
     color: var(--dark);
     position: relative;
     padding-bottom: 0.6rem;
@@ -334,21 +340,19 @@ header nav button:hover {
     text-align: center;
     background-color: var(--c1a);
     color: white;
-    font-weight: 800;
     padding: 1.2rem 0 1rem;
     border-radius: 0.2rem;
     border-bottom: 0.5rem solid #742f35;
-    letter-spacing: 0.1em;
-    font-size: clamp(1.6rem, 4.5vw, 2rem);
     white-space: pre-line;
+    width: 100%;
 }
 
 header .icon.tel::before {
     content: '';
     position: relative;
     background-image: url(../assets/icons/tel.svg);
-    width: 1.4rem;
-    height: 1.4rem;
+    width: 1.3rem;
+    height: 1.3rem;
     display: inline-block;
     background-size: contain;
     background-repeat: no-repeat;
@@ -366,23 +370,29 @@ header .logo .ctnr {
     width: 100%;
 }
 
+.circle_ctnr {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: clamp(25rem, 69vw, 34rem);
+    overflow: hidden;
+    pointer-events: none;
+}
+
 header .circle {
     background-image: url(../assets/word-circle.svg);
     position: absolute;
     width: clamp(25rem, 69vw, 34rem);
     height: clamp(25rem, 69vw, 34rem);
-    transform: translateY(-50%);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     left: 0;
     right: 0;
     margin: 0 auto;
-    /* animation: rotate 120s linear infinite; */
-    pointer-events: none;
     filter: drop-shadow(0 0.2rem 0 var(--grey));
     transform: translateY(calc(-10%)) rotate(0deg);
-    transition: transform 0.4s cubic-bezier(0, 0, 0.2, 1);
+    transition: transform 0.6s cubic-bezier(0, 0, 0.2, 1);
     will-change: transform;
 }
 
@@ -419,31 +429,35 @@ header .social {
 }
 
 header .social .icon {
-    width: clamp(2.3rem, 6.2vw, 2.7rem);
-    height: clamp(2.3rem, 6.2vw, 2.7rem);
-    background-color: var(--grey2);
+    width: clamp(2rem, 5.8vw, 2.7rem);
+    height: clamp(2rem, 5.8vw, 2.7rem);
+    background-color: var(--light);
     border-radius: 0.3rem;
     background-size: 60%;
     border: 0.1rem solid #ffffff33;
 }
 
-header .icon.instagram {
-    background-image: url(../assets/icons/instagram.svg);
+.icon.instagram.dark {
+    background-image: url(../assets/icons/instagram-dark.svg);
+} .icon.instagram.light {
+    background-image: url(../assets/icons/instagram-light.svg);
 }
 
-header .icon.facebook {
-    background-image: url(../assets/icons/facebook.svg);
+.icon.facebook.dark {
+    background-image: url(../assets/icons/facebook-dark.svg);
+} .icon.facebook.light {
+    background-image: url(../assets/icons/facebook-light.svg);
 }
 
 .hambt {
     width: clamp(3rem, calc(2vw + 2vh), 4.6rem);
-    height: calc(clamp(3rem, calc(2vw + 2vh), 4.6rem) * 0.7);
+    height: calc(clamp(3rem, calc(2vw + 2vh), 4.6rem) * 0.8);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
     position: relative;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .hambt div {
@@ -456,7 +470,7 @@ header .icon.facebook {
 
 
 section.intro {
-    height: clamp(50rem, calc(55vh + 65vw + 9rem), 78rem);
+    height: clamp(50rem, calc(55vh + 65vw + 9rem), 77rem);
     background-color: #141110;
     color: var(--light);
     font-weight: 400;
@@ -469,6 +483,8 @@ section.intro {
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
+    background-color: var(--dark);
+    background-image: url(../assets/textures/dark-paper.jpg);
 }
 
 .intro .video_ctnr {
@@ -481,16 +497,25 @@ section.intro {
 }
 
 .intro .content {
-    width: clamp(10rem, 84vw, 84rem);
+    width: clamp(10rem, 84vw, 105rem);
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 2.5rem;
     position: relative;
     top: 6vh;
 }
 
 .cta {
     transition: filter 0.15s ease;
+    font-size: clamp(1.2rem, 3.9vw, 1.6rem);
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    border-radius: 0.2rem;
+    text-align: center;
+    padding: clamp(1rem, 1vw, 1.2rem) clamp(2rem, 2vw, 3rem) clamp(1rem, 1vw, 1.3rem);
+    box-shadow: 0 0.1rem;
+    border: 0.1rem solid;
+    width: fit-content;
 }
 
 .cta:hover {
@@ -500,17 +525,22 @@ section.intro {
 h1 {
     display: block;
     text-align: center;
-    font-size: clamp(2.5rem, calc(0.5vh + 2.1vw + 2rem), 4.2rem);
-    font-weight: 100;
+    font-size: clamp(2rem, calc(0.7vh + 1.4vw + 1.2rem), 3.6rem);
+    font-weight: 400;
     letter-spacing: 0.03em;
     text-shadow: 0.2rem 0.2rem #0e0a0c5c;
+    line-height: 1.3;
+}
+
+h1 b {
+    font-weight: 600;
 }
 
 .intro address {
     text-align: center;
-    font-size: clamp(1.1rem, 3.3vw, 1.6rem);
-    letter-spacing: 0.4rem;
-    font-weight: 600;
+    font-size: clamp(1.1rem, 3.3vw, 1.4rem);
+    letter-spacing: 0.2rem;
+    font-weight: 500;
     display: flex;
     gap: 0.8rem;
     align-items: center;
@@ -557,28 +587,15 @@ address .icon {
     flex-direction: row;
 }
 
-.intro .cta_ctnr a,
-.our_menu a,
-.cta_ctnr button {
-    width: fit-content;
-    padding: 1rem 2rem;
-    font-weight: 800;
-    font-size: clamp(1.6rem, 4.4vw, 1.9rem);
-    letter-spacing: 0.11em;
-    border-bottom: 0.2rem solid var(--lightgrey2);
-    /* box-shadow: 0 0.6rem 1.2rem -0.4rem rgb(28 34 38 / 60%); */
-    border-radius: 0.2rem;
-}
-
 .cta_ctnr .menu {
-    background-color: var(--c1a);
+    background-color: rgb(159 60 83 / 85%);
     color: white;
     /* border: 0.1rem solid var(--light); */
     /* background-image: linear-gradient(0deg, #fff3, transparent 45%); */
 }
 
 .cta_ctnr .book {
-    background-color: var(--dark);
+    background-color: rgb(28 34 38 / 85%);
     color: var(--light);
     /* border: 0.1rem solid var(--grey2); */
     /* background-image: linear-gradient(0deg, #fffa, transparent 45%); */
@@ -586,13 +603,27 @@ address .icon {
 }
 
 section.meet_frederic {
-    padding: clamp(3rem, 7vw, 6rem) 0 clamp(3rem, 16vw, 14rem);
+    padding: clamp(3rem, 7vw, 8rem) 0 clamp(3rem, 16vw, 8rem);
     background-color: var(--light);
-    scroll-margin-top: 22rem;
+    scroll-margin-top: 10rem;
+    background-image: url(../assets/textures/white-paper.jpg);
 }
 
-.meet_frederic .width,
-.our_menu .width {
+header,
+.intro,
+.meet_frederic,
+.our_menu,
+.the_road_trip,
+.luxembourg,
+footer,
+.modal,
+.modal::before,
+.private_hire {
+    background-size: cover;
+    background-position: center;
+}
+
+.meet_frederic .width, .our_menu .width {
     width: var(--width);
     display: flex;
     flex-flow: row wrap;
@@ -602,9 +633,10 @@ section.meet_frederic {
 }
 
 .meet_frederic .content {
-    font-weight: 500;
+    font-weight: 600;
     font-size: clamp(1.15rem, 3.8vw, 1.65rem);
     /* max-width: 45rem; */
+    color: var(--grey);
 }
 
 .meet_frederic .content,
@@ -624,20 +656,20 @@ section.meet_frederic {
 }
 
 .meet_frederic h2 {
-    color: var(--c1);
-    font-family: 'Bebas Neue', sans-serif;
+    color: var(--grey2);
 }
 
 .meet_frederic h2,
 .our_menu h2 {
-    font-size: clamp(4rem, calc(3.5vw + 3vh + 1.5rem), 7rem);
-    font-weight: 100;
+    font-size: clamp(2rem, calc(2vw + 2vh + 0.6rem), 3.3rem);
+    font-weight: 500;
     margin-bottom: 2rem;
     line-height: 1;
     display: flex;
     flex-flow: row wrap;
     align-items: baseline;
     column-gap: 1rem;
+    max-width: 40rem;
 }
 
 .meet_frederic h2 span {
@@ -646,8 +678,8 @@ section.meet_frederic {
 
 .meet_frederic h2 span,
 .our_menu h2 span {
-    font-weight: 800;
-    font-size: 1.4em;
+    font-weight: 700;
+    font-size: 2em;
 }
 
 .meet_frederic p,
@@ -655,30 +687,28 @@ section.meet_frederic {
 .the_road_trip p,
 .luxembourg p {
     margin-bottom: 0.9rem;
-    letter-spacing: 0.04rem;
 }
 
 .meet_frederic b,
 .meet_frederic strong {
-    font-weight: 600;
     color: var(--c1a);
 }
 
 
 
 section.our_menu {
-    background-color: var(--c2);
+    background-color: var(--c1);
+    background-image: url(../assets/textures/wine-paper.jpg);
     color: white;
     padding: clamp(3rem, 9vw, 9rem) 0 6rem;
 }
 
 .our_menu h2 {
-    font-family: 'Bebas Neue';
-    color: var(--c1);
+    color: var(--light);
 }
 
 .our_menu h2 span {
-    color: var(--c1a);
+    color: var(--c2);
 }
 
 .our_menu .composition {
@@ -692,9 +722,9 @@ section.our_menu {
     width: clamp(10rem, 100%, 100rem);
     max-height: 90vh;
     max-width: 97vh;
-    margin-top: calc(clamp(4rem, 20vw, 22rem) * -1);
+    margin-top: calc(clamp(4rem, clamp(10rem, 20vw, 20rem), 26rem) * -1);
     position: relative;
-    filter: drop-shadow(-1.2rem 1.2rem 0.1rem #00000010);
+    filter: drop-shadow(-1.2rem 1.2rem 0 #00000010);
     height: clamp(26rem, 70vw, 64rem);
     margin-inline: auto;
 }
@@ -726,7 +756,7 @@ section.our_menu {
     z-index: 1;
 }
 
-.our_menu .video_composition img {
+.our_menu .video_composition picture {
     position: absolute;
     width: clamp(5rem, 40%, 28rem);
     left: clamp(3rem, 6vw, 11rem);
@@ -737,31 +767,67 @@ section.our_menu {
 .our_menu p {}
 
 .our_menu a {
-    width: fit-content;
-    font-size: 2rem;
-    padding: 0.8rem 2.7rem;
     margin-top: 2.5rem;
     border-bottom: 0.2rem solid white;
-    box-shadow: unset;
-    background-color: var(--c1a);
-    border-radius: 0.2rem;
     color: white;
-    font-family: 'Bebas Neue';
-    font-weight: 800;
-    letter-spacing: 0.1em;
 }
 
 .our_menu .content {
-    font-weight: 500;
     font-size: clamp(1.15rem, 4vw, 1.8rem);
-    color: var(--grey);
+    color: var(--light);
+    font-weight: 300;
 }
 
 .our_menu b,
 .our_menu strong {
-    font-weight: 600;
+    font-weight: 500;
     /* color: #CDD; */
 }
+
+
+
+
+
+
+
+
+section.private_hire {
+    padding: clamp(7rem, 6vw, 10rem) 0;
+    background-image: url(../assets/textures/white-paper.jpg);
+    text-align: center;
+    color: var(--grey);
+}
+
+.private_hire .width {
+    width: clamp(10rem, 86vw, 126rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.private_hire h2 {
+    font-size: clamp(2rem, calc(2vw + 2vh + 0.6rem), 3.3rem);
+    font-weight: 700;
+}
+
+.private_hire p {
+    font-size: clamp(1.15rem, 4.2vw, 1.9rem);
+    font-weight: 600;
+    line-height: 1.65;
+}
+
+.private_hire p b, .private_hire p strong {
+    font-weight: 700;
+}
+
+.private_hire .cta {
+    font-weight: 700;
+    border-width: 0.2rem;
+    box-shadow: 0 0.2rem;
+}
+
+
 
 
 
@@ -772,7 +838,8 @@ section.our_menu {
 }
 
 section.the_road_trip {
-    background-color: var(--c1);
+    background-color: var(--dark);
+    background-image: url(../assets/textures/dark-paper.jpg);
     /* min-height: 100rem; */
     justify-content: unset;
     color: var(--light);
@@ -782,7 +849,7 @@ section.the_road_trip {
 }
 
 .the_road_trip .video_ctnr {
-    height: clamp(10rem, 150vw, 75rem);
+    height: clamp(10rem, 150vw, 45rem);
     /* overflow: hidden; */
     background-color: var(--grey);
     position: relative;
@@ -810,10 +877,10 @@ section.the_road_trip {
     margin: 0 auto;
     left: 0;
     right: 0;
-    font-size: clamp(5rem, 15vw, 9rem);
+    font-size: clamp(4rem, 7vw, 7rem);
     color: var(--light);
-    mix-blend-mode: luminosity;
-    font-weight: 600;
+    /* mix-blend-mode: luminosity; */
+    font-weight: 700;
     text-align: center;
     transform: translateY(-50%);
     line-height: 1;
@@ -838,7 +905,7 @@ section.the_road_trip {
 }
 
 .the_road_trip .content {
-    font-size: clamp(1.15rem, 4.5vw, 2rem);
+    font-size: clamp(1.15rem, 4vw, 1.8rem);
     font-weight: 200;
 }
 
@@ -853,15 +920,8 @@ section.the_road_trip {
 
 .the_road_trip .cta {
     width: fit-content;
-    color: var(--c2);
-    font-size: 2rem;
-    border-bottom: 0.2rem solid var(--c2);
-    border-radius: 0.2rem;
-    background-color: var(--c1a);
-    font-family: 'Bebas Neue';
-    font-weight: 600;
+    color: var(--light);
     letter-spacing: 0.1em;
-    padding: 0.8rem 2.7rem;
     cursor: pointer;
 }
 
@@ -891,6 +951,7 @@ section.luxembourg {
     background-color: white;
     justify-content: unset;
     padding: 0 0 clamp(4rem, 5vw, 9rem);
+    background-image: url(../assets/textures/white-paper.jpg);
 }
 
 .luxembourg .showoff {
@@ -930,16 +991,16 @@ section.luxembourg {
 }
 
 .luxembourg h2 {
-    font-size: clamp(4rem, calc(4.5vw + 4vh + 2rem), 9rem);
-    font-weight: 900;
+    font-size: clamp(3rem, calc(3.5vw + 2.6vh + 1rem), 6rem);
+    font-weight: 700;
     margin-bottom: 1rem;
     line-height: 1;
-    font-family: 'Bebas Neue';
     color: var(--c1a);
 }
 
 .luxembourg .content {
-    font-size: clamp(1.15rem, 4.5vw, 1.8rem);
+    font-size: clamp(1.15rem, 4vw, 1.8rem);
+    font-weight: 500;
 }
 
 .luxembourg .content p {}
@@ -951,7 +1012,7 @@ section.luxembourg {
 }
 
 .luxembourg .width {
-    gap: clamp(1rem, 4vw, 9rem);
+    gap: clamp(1rem, 6vw, 9rem);
 }
 
 
@@ -973,7 +1034,7 @@ footer {
     color: var(--light);
     padding: 6rem 2rem 12rem;
     box-sizing: border-box;
-    /* text-align: center; */
+    background-image: url(../assets/textures/dark-paper.jpg);
 }
 
 footer>.ctnr {
@@ -995,7 +1056,7 @@ footer .logo_nav {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     letter-spacing: 0.2rem;
 }
 
@@ -1034,7 +1095,7 @@ footer .opening_hours {
     font-family: 'Montserrat';
     display: flex;
     flex-direction: column;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     line-height: 1.4;
     font-weight: 300;
     gap: 0.6rem;
@@ -1061,25 +1122,22 @@ footer .opening_hours {
 }
 
 footer .opening_hours h2 {
-    font-weight: 600;
-    font-family: 'Bebas Neue';
-    font-size: 3.6rem;
-    letter-spacing: 0.2rem;
-    color: var(--grey2);
+    font-weight: 700;
+    font-size: 3rem;
+    color: var(--c1a);
 }
 
 footer .opening_hours h3 {
-    font-weight: 800;
-    font-family: 'Bebas Neue';
-    margin: 1rem 0 0;
-    font-size: 2.1rem;
+    font-weight: 600;
+    margin: 1.3rem 0 0;
+    font-size: 1.8rem;
     letter-spacing: 0.3rem;
 }
 
 footer nav {
     display: flex;
     flex-direction: column;
-    font-size: 2.4rem;
+    font-size: 1.9rem;
     letter-spacing: 0.2rem;
     text-align: center;
     align-items: center;
@@ -1103,8 +1161,8 @@ footer nav {
     align-items: center;
     justify-content: center;
     letter-spacing: 0.1rem;
-    font-size: 1.5rem;
-    font-weight: 800;
+    font-size: 1rem;
+    font-weight: 600;
 }
 
 .lang:hover {
@@ -1257,7 +1315,10 @@ footer nav {
 
     header .icon.tel {
         transition: transform 0.3s ease;
-        transform: translateY(-340%);
+        transform: translateY(-360%);
+        color: var(--lightgrey);
+        z-index: 5;
+        font-weight: 600;
     }
 
     .icon.tel.down {
@@ -1269,8 +1330,8 @@ footer nav {
     }
 
     header .logo img {
-        box-shadow: 0 0 2rem 1rem var(--grey);
-        background-color: var(--grey);
+        box-shadow: 0 0 2rem 1rem var(--dark);
+        background-color: var(--dark);
     }
 
     .intro .video_ctnr video {
@@ -1368,7 +1429,7 @@ footer nav {
 
     .luxembourg .content {
         margin-top: 8rem;
-        max-width: 50rem;
+        max-width: 52rem;
     }
 
 

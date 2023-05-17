@@ -18,6 +18,10 @@
         video.load();
     </script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -132,14 +136,16 @@
                 <a class="tel icon" href="tel:+35226784240">+352 26 78 42 40</a>
 
                 <img src="../assets/logo/logo-light.svg" alt="">
+            </div>
 
+            <div class="circle_ctnr">
                 <div class="circle"></div>
             </div>
             
             <div class="social">
-                <a href="https://www.facebook.com/restaurantbechergare" class="icon facebook"></a>
+                <a href="https://www.facebook.com/restaurantbechergare" class="icon facebook dark"></a>
                 
-                <a href="https://www.instagram.com/becher_gare/" class="icon instagram"></a>
+                <a href="https://www.instagram.com/becher_gare/" class="icon instagram dark"></a>
             </div>
 
             <a class="award" href="https://www.gaultmillau.lu/en/restaurants/le-becher-gare-bech" target="_blank" title="Gault&Millau score 12 | 20">
@@ -164,16 +170,16 @@
                 
                 <h1><b>Discover the ultimate destination</b> for classic car enthusiasts and food lovers in the heart of Europe: <strong>Becher Gare</strong>.</h1>
 
-                <address>
-                    <div class="icon"></div>
-                    1 Bécher Gare, 6230 Bech, Luxembourg
-                </address>
-
                 <div class="cta_ctnr">
                     <a href="menu.html" class="cta menu">Open menu</a>
 
                     <button type="button" class="cta book book_bt">Book now</button>
                 </div>
+
+                <address>
+                    <div class="icon"></div>
+                    1 Bécher Gare, 6230 Bech, Luxembourg
+                </address>
 
                 <a href="#about" class="fold">
 
@@ -183,7 +189,6 @@
 
         <section class="meet_frederic" id="about">
             <div class="width">
-
                 <picture class="composition reveal" loading="lazy">
                     <source srcset="../assets/compositions/meet-frederic.webp" type="image/webp">
                     <source srcset="../assets/compositions/meet-frederic.png" type="image/png">
@@ -223,7 +228,11 @@
                         <source data-src="../assets/video/food/03.mp4">
                     </video>
 
-                    <img src="../assets/compositions/fine-cuisine-lettering.png" alt="Fine Cuisine Lettering" loading="lazy">
+                    <picture loading="lazy">
+                        <source srcset="../assets/compositions/fine-cuisine-lettering.webp" type="image/webp">
+                        <source srcset="../assets/compositions/fine-cuisine-lettering.png" type="image/png">
+                        <img src="../assets/compositions/fine-cuisine-lettering.png" alt="Fine Cuisine Lettering" draggable="false" loading="lazy">
+                    </picture>
                 </div>
 
                 <div class="content">
@@ -240,6 +249,29 @@
             </div>
         </section>
 
+
+
+
+
+
+
+
+        <section class="private_hire" id="private-hire">
+            <div class="width">
+                <h2>Private Hire</h2>
+
+                <p><strong>Don't miss the opportunity to elevate your next gathering with the private hiring services of Becher Gare.</strong> Contact our dedicated events team today to discuss your requirements and let us bring your vision to life. Together, we will create an <b>unforgettable experience</b> that will be cherished by you and your guests for years to come.</p>
+
+                <button type="button" class="cta book_bt">Book a private meal</button>
+            </div>
+        </section>
+
+
+
+
+
+
+
         <section class="the_road_trip" id="the-road-trip">
             <div class="video_ctnr">
                 <video class="lazy" autoplay muted playsinline loop poster="../assets/video/roadtrip-poster.jpg">
@@ -250,7 +282,11 @@
             </div>
 
             <div class="width">
-                <img class="composition reveal" src="../assets/memorable-dining.png" alt="Fréderic composition" loading="lazy">
+                <picture class="composition reveal" loading="lazy">
+                    <source srcset="../assets/compositions/memorable-dining.webp" type="image/webp">
+                    <source srcset="../assets/compositions/memorable-dining.png" type="image/png">
+                    <img src="../assets/compositions/memorable-dining.png" alt="Memorable dining composition" draggable="false" loading="lazy">
+                </picture>
 
                 <div class="content">    
                     <p>Hit the road and discover the beauty of Luxembourg's countryside, from rolling hills to picturesque vineyards.</p>
@@ -303,9 +339,9 @@
 
                 <a class="icon tel" href="tel:+35226784240">+352 26 78 42 40</a>
 
-                <a class="icon facebook" href="https://www.facebook.com/restaurantbechergare">Facebook</a>
+                <a class="icon facebook light" href="https://www.facebook.com/restaurantbechergare">Facebook</a>
                 
-                <a class="icon instagram" href="https://www.instagram.com/becher_gare/">Instagram</a>
+                <a class="icon instagram light" href="https://www.instagram.com/becher_gare/">Instagram</a>
 
             </div>
         

@@ -12,6 +12,10 @@
     gtag('config', 'G-NW6ETVB02J');
     </script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
     <script>
         var video = document.createElement('video');
         video.src = 'assets/video/hero-hor.mp4';
@@ -126,14 +130,16 @@
                 <a class="tel icon" href="tel:+35226784240">+352 26 78 42 40</a>
 
                 <img src="assets/logo/logo-light.svg" alt="">
+            </div>
 
+            <div class="circle_ctnr">
                 <div class="circle"></div>
             </div>
             
             <div class="social">
-                <a href="https://www.facebook.com/restaurantbechergare" class="icon facebook"></a>
+                <a href="https://www.facebook.com/restaurantbechergare" class="icon facebook dark"></a>
                 
-                <a href="https://www.instagram.com/becher_gare/" class="icon instagram"></a>
+                <a href="https://www.instagram.com/becher_gare/" class="icon instagram dark"></a>
             </div>
 
             <a class="award" href="https://www.gaultmillau.lu/en/restaurants/le-becher-gare-bech" target="_blank" title="Gault&Millau score 12 | 20">
@@ -215,7 +221,11 @@
                         <source data-src="assets/video/food/03.mp4">
                     </video>
 
-                    <img src="assets/compositions/fine-cuisine-lettering.png" alt="Fine Cuisine Lettering" loading="lazy">
+                    <picture loading="lazy">
+                        <source srcset="assets/compositions/fine-cuisine-lettering.webp" type="image/webp">
+                        <source srcset="assets/compositions/fine-cuisine-lettering.png" type="image/png">
+                        <img src="assets/compositions/fine-cuisine-lettering.png" alt="Fine Cuisine Lettering" draggable="false" loading="lazy">
+                    </picture>
                 </div>
 
                 <div class="content">
@@ -232,6 +242,32 @@
             </div>
         </section>
 
+
+
+
+
+
+
+
+        <section class="private_hire" id="private-hire">
+            <div class="width">
+                <h2>Location Privée</h2>
+
+                <p><strong>Ne manquez pas l'occasion d'élever votre prochain rassemblement avec les services de location privés de Becher Gare.</strong> Contactez notre équipe dédiée aux événements dès aujourd'hui pour discuter de vos besoins et laissez-nous donner vie à votre vision. Ensemble, nous allons créer une <b>expérience inoubliable</b> qui sera chérie par vous et vos invités pour les années à venir.</p>
+
+                <button type="button" class="cta book_bt">Réserver un repas privé</button>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
         <section class="the_road_trip" id="the-road-trip">
             <div class="video_ctnr">
                 <video class="lazy" autoplay muted playsinline loop poster="assets/video/roadtrip-poster.jpg">
@@ -242,7 +278,7 @@
             </div>
 
             <div class="width">
-                <img class="composition reveal" src="assets/memorable-dining.png" alt="Fréderic composition" loading="lazy">
+                <img class="composition reveal" src="assets/compositions/memorable-dining.png" alt="Fréderic composition" loading="lazy">
 
                 <div class="content">    
                     <p>Prenez la route et découvrez la beauté de la campagne luxembourgeoise, des collines verdoyantes aux vignobles pittoresques.</p>
@@ -295,9 +331,9 @@
 
                 <a class="icon tel" href="tel:+35226784240">+352 26 78 42 40</a>
 
-                <a class="icon facebook" href="https://www.facebook.com/restaurantbechergare">Facebook</a>
+                <a class="icon facebook light" href="https://www.facebook.com/restaurantbechergare">Facebook</a>
                 
-                <a class="icon instagram" href="https://www.instagram.com/becher_gare/">Instagram</a>
+                <a class="icon instagram light" href="https://www.instagram.com/becher_gare/">Instagram</a>
 
             </div>
         

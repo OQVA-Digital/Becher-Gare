@@ -1,28 +1,5 @@
-@font-face {
-    font-family: Bebas Neue;
-    src: url("../assets/fonts/BebasNeue-Book.otf");
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: Bebas Neue;
-    src: url("../assets/fonts/BebasNeue-Regular.ttf");
-    font-weight: 600;
-}
-
-@font-face {
-    font-family: Bebas Neue;
-    src: url("../assets/fonts/BebasNeue-Bold.ttf");
-    font-weight: 800;
-}
-
-@font-face {
-    font-family: Montserrat;
-    src: url("../assets/fonts/Montserrat-Variable.ttf");
-}
-
 :root {
-    --light: #dbe3d5;
+    --light: #ffffff;
 
     --grey: #333f46;
     --grey2: #415058;
@@ -32,10 +9,11 @@
 
     --dark: #1c2226;
 
-    --c1: #441a1e;
-    --c1a: #8b3d44;
-
-    --c2: #e7dda4;
+    --c1: #6d2e3d;
+    --c1a: #9f3c53;
+    --c1b: #eb4f73;
+    
+    --c2: #ffe189;
 
     --width: clamp(10rem, 86vw, 150rem);
 }
@@ -60,12 +38,10 @@ h6 {
 }
 
 body {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background-color: var(--light);
-    letter-spacing: 0.06rem;
     position: relative;
     font-size: 1.6rem;
-    letter-spacing: 0.05em;
 }
 
 a {
@@ -74,7 +50,7 @@ a {
     color: unset;
     display: block;
     width: 100%;
-    white-space: nowrap;
+    /* white-space: nowrap; */
 }
 
 img {
@@ -113,7 +89,7 @@ main {
 }
 
 hr {
-    margin:unset;
+    margin: unset;
 }
 
 button {
