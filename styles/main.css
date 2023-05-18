@@ -946,7 +946,7 @@ section.terrace {
     position: absolute;
     left: -1rem;
     bottom: 0;
-    height: 0.4rem;
+    height: 0.3rem;
     width: 5rem;
 }
 
@@ -958,7 +958,7 @@ section.terrace {
 
 .terrace .cta_ctnr {
     justify-content: unset;
-    gap: 2rem;
+    gap: 1.5rem;
     margin-top: clamp(0.5rem, 2vw, 1.2rem);
 }
 
