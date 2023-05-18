@@ -37,7 +37,7 @@ header nav {
     padding: 3.5rem 0;
     width: clamp(10rem, 60vw, 30rem);
     font-size: clamp(1rem, 4vw, 1.7rem);
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.06rem;
     transition: transform 0.4s ease, opacity 0.1s ease, visibility 0.1s ease;
     transform: translateY(-7rem);
     opacity: 0;
@@ -118,7 +118,8 @@ header .tel {
     align-items: center;
     gap: 0.8rem;
     z-index: 4;
-    border-radius: 0.2rem;
+    border-radius: 0.5rem;
+    text-shadow: 0.1rem 0.1rem var(--lightgrey);
 }
 
 header nav a,
@@ -607,16 +608,7 @@ address .icon {
     background-image: url(../assets/textures/dark-paper.jpg);
 }
 
-header,
-.intro,
-.meet_frederic,
-.our_menu,
-.the_road_trip,
-.luxembourg,
-footer,
-.modal,
-.modal::before,
-.private_hire {
+header, .intro, .meet_frederic, .our_menu, .the_road_trip, .luxembourg, footer, .modal, .modal::before, .private_hire, .terrace .content {
     background-size: cover;
     background-position: center;
 }
@@ -631,7 +623,7 @@ footer,
 
 
 section.meet_frederic {
-    padding: clamp(3rem, 7vw, 8rem) 0 clamp(3rem, 26vw, 10rem);
+    padding: clamp(3rem, 7vw, 8rem) 0 clamp(3rem, 38vw, 18rem);
     background-color: var(--light);
     scroll-margin-top: 10rem;
     background-image: url(../assets/textures/white-paper.jpg);
@@ -672,7 +664,7 @@ section.meet_frederic {
     line-height: 1.45;
 }
 
-.meet_frederic .composition {
+.meet_frederic .composition, .meet_frederic .composition img {
     width: clamp(10rem, 100%, 50rem);
     max-height: 80vh;
     max-width: 80vw;
@@ -687,7 +679,7 @@ section.meet_frederic {
 .our_menu h2 {
     font-size: clamp(2rem, calc(1.8vw + 1.8vh + 0.6rem), 3.3rem);
     font-weight: 500;
-    margin-bottom: clamp(1rem, 3.8vw, 1.8rem);
+    margin-bottom: clamp(1rem, 3vw, 1.8rem);
     line-height: 1;
     display: flex;
     flex-flow: row wrap;
@@ -721,14 +713,16 @@ section.meet_frederic {
 .meet_frederic .expand {
     display: block;
     position: absolute;
-    bottom: 0;
+    bottom: -1rem;
     font-weight: 600;
     color: var(--grey);
     border-radius: 0.2rem;
     width: fit-content;
     font-size: clamp(1.2rem, 3.8vw, 1.7rem);
-    padding: 0.4rem 0.9rem 0.4rem 2.3rem;
-    box-shadow: 0 0.6rem 1rem -1rem;
+    padding: 0.5rem 0.9rem 0.5rem 2.3rem;
+    box-shadow: 0 0.9rem 1rem -1.2rem;
+    border: 0.1rem solid var(--light);
+    background-image: url(../assets/textures/white-paper.jpg);
 }
 
 .meet_frederic .expand::before {
@@ -780,7 +774,7 @@ section.our_menu {
     width: clamp(10rem, 100%, 100rem);
     max-height: 90vh;
     max-width: 88rem;
-    margin-top: calc(clamp(4rem, 20vw, 21rem) * -1);
+    margin-top: -34%;
     position: relative;
     filter: drop-shadow(-1.2rem 1.2rem 0 #00000010);
     height: clamp(26rem, 70vw, 64rem);
@@ -851,7 +845,7 @@ section.our_menu {
 
 
 section.private_hire {
-    padding: clamp(9rem, 7vw, 16rem) 0;
+    padding: clamp(9rem, 33vw, 16rem) 0;
     background-image: url(../assets/textures/white-paper.jpg);
     text-align: center;
     color: var(--grey);
@@ -899,6 +893,7 @@ section.private_hire {
 
 section.terrace {
     height: clamp(50rem, 230vw, 100rem);
+    max-height: 110vh;
     background-image: url(../assets/photos/terrace.jpg);
     background-size: cover;
     background-attachment: fixed;
@@ -916,6 +911,7 @@ section.terrace {
 .terrace .content {
     background-color: var(--light);
     background-image: url(../assets/textures/white-paper.jpg);
+    background-attachment: fixed;
     color: var(--grey);
     padding: clamp(2rem, 7.5vw, 4rem);
     border-radius: 0.3rem;
@@ -1471,6 +1467,7 @@ footer nav {
         font-weight: 600;
         padding: 0.6rem;
         line-height: 1.1;
+        text-shadow: unset;
     }
 
     header .icon.tel:hover {
@@ -1479,7 +1476,7 @@ footer nav {
     }
 
     .icon.tel.down {
-        transform: translateY(160%);
+        transform: translateY(150%);
         background-color: var(--dark);
     }
 
@@ -1535,6 +1532,7 @@ footer nav {
         width: clamp(35rem, 38vw, 50rem);
         margin-top: unset;
         margin-bottom: 0;
+        display: flex;
     }
 
     .meet_frederic .composition img {
@@ -1568,6 +1566,10 @@ footer nav {
     .our_menu .composition {
         width: clamp(10rem, 40vw, 100rem);
         flex: 1;
+    }
+
+    .our_menu .video_composition {
+        margin-top: -19%;
     }
 
     .terrace .width {
