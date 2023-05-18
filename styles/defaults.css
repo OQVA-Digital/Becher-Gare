@@ -15,7 +15,7 @@
     
     --c2: #ffe189;
 
-    --width: clamp(10rem, 86vw, 150rem);
+    --width: clamp(10rem, 86vw, 142rem);
 }
 
 html {
@@ -58,6 +58,7 @@ img {
     max-width: 100%;
     object-fit: contain;
     max-height: inherit;
+    width: 100%;
 }
 
 .mobile_hidden {

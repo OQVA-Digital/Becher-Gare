@@ -111,3 +111,20 @@ ScrollReveal().reveal('.reveal', slideUp);
 
 
 
+const expand = document.querySelectorAll('.expand')
+
+for(let i=0;i<expand.length;i++) {
+  expand[i].addEventListener('click', function() {
+    if(expand[i].previousElementSibling.classList.contains('expandable') == true) {
+      expand[i].previousElementSibling.classList.add('expanded')
+
+      expand[i].previousElementSibling.style.MaskImage = 'unset'
+      expand[i].previousElementSibling.style.WebkitMaskImage = 'unset'
+      expand[i].previousElementSibling.style.maxHeight = expand[i].previousElementSibling.scrollHeight + 'px'
+
+      expand[i].remove()
+    }
+  })
+}
+
+
