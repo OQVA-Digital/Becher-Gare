@@ -160,7 +160,7 @@ header nav button:hover {
     position: absolute;
     right: 0;
     left: 0;
-    top: clamp(1rem, calc(16vh + 16vw), 17rem);
+    top: clamp(1rem, calc(11vh + 10vw), 17rem);
     margin: 0 auto;
     width: clamp(10rem, 86vw, 42rem);
     height: fit-content;
@@ -171,14 +171,14 @@ header nav button:hover {
     /* transform: translateY(-50%); */
     display: flex;
     flex-direction: column;
-    z-index: 3;
+    z-index: 6;
     transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.4s ease;
     opacity: 0;
     visibility: hidden;
     padding: 3rem 3rem 3rem;
     box-sizing: border-box;
     transform: translateY(-1rem);
-    max-height: 70vh;
+    max-height: 85vh;
     box-shadow: 0 1rem 5rem -2rem var(--grey);
     border: 0.2rem solid var(--c1a);
     background-image: url(../assets/textures/white-paper.jpg);
@@ -319,7 +319,7 @@ header nav button:hover {
 .book.modal p {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    margin: 0.5rem 0 0.2rem;
+    margin: clamp(0.1rem, 1vw, 0.5rem) 0 0.2rem;
     line-height: 1.5;
     letter-spacing: 0;
     /* max-width: 33rem; */
@@ -379,7 +379,7 @@ header .logo .ctnr {
     position: absolute;
     top: 0;
     height: 100%;
-    width: clamp(25rem, 69vw, 34rem);
+    width: clamp(25rem, 75vw, 34rem);
     overflow: hidden;
     pointer-events: none;
 }
@@ -387,8 +387,8 @@ header .logo .ctnr {
 header .circle {
     background-image: url(../assets/word-circle.svg);
     position: absolute;
-    width: clamp(25rem, 69vw, 34rem);
-    height: clamp(25rem, 69vw, 34rem);
+    width: clamp(25rem, 75vw, 34rem);
+    height: clamp(25rem, 75vw, 34rem);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -425,7 +425,7 @@ header .social {
     right: -4%;
     bottom: 0;
     display: flex;
-    gap: clamp(0.6rem, 1vw, 1rem);
+    gap: clamp(0.6rem, 1.6vw, 1rem);
     justify-content: center;
     /* height: 60%; */
     align-items: center;
@@ -526,6 +526,7 @@ section.intro {
     border: 0.1rem solid;
     width: fit-content;
     letter-spacing: 0.06rem;
+    box-sizing: border-box;
 }
 
 .cta:hover {
@@ -548,7 +549,7 @@ h1 b, h1 strong {
 
 .intro address {
     text-align: center;
-    font-size: clamp(1.1rem, 3.8vw, 1.3rem);
+    font-size: clamp(1.1rem, 3vw, 1.3rem);
     letter-spacing: 0.2rem;
     font-weight: 500;
     display: flex;
@@ -690,7 +691,7 @@ section.meet_frederic {
 
 .meet_frederic h2,
 .our_menu h2 {
-    font-size: clamp(2rem, calc(1.8vw + 1.8vh + 0.6rem), 4rem);
+    font-size: clamp(2rem, calc(2vw + 2vh + 0.8rem), 4rem);
     font-weight: 400;
     margin-bottom: clamp(1rem, 3vw, 1.8rem);
     line-height: 1;
@@ -922,7 +923,6 @@ section.terrace {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
 }
 
 .terrace .content {
@@ -934,8 +934,7 @@ section.terrace {
     width: clamp(10rem, 66vw, 43rem);
     /* height: 40vh; */
     position: sticky;
-    top: clamp(10rem, 30vw, 12rem);
-    bottom: calc(clamp(10rem, 30vw, 12rem) * 0.6);
+    top: calc(clamp(10rem, 30vw, 12rem) * 1.4);
     display: flex;
     flex-direction: column;
     gap: 1rem;
