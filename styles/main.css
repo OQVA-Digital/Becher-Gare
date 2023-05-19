@@ -36,8 +36,7 @@ header nav {
     justify-content: center;
     padding: 3.5rem 0;
     width: clamp(10rem, 60vw, 30rem);
-    font-size: clamp(1rem, 4vw, 1.7rem);
-    letter-spacing: 0.06rem;
+    font-size: clamp(1rem, 5vw, 1.65rem);
     transition: transform 0.4s ease, opacity 0.1s ease, visibility 0.1s ease;
     transform: translateY(-7rem);
     opacity: 0;
@@ -46,6 +45,8 @@ header nav {
     border-radius: 0.6rem;
     max-width: 40rem;
     text-align: center;
+    letter-spacing: 0.08rem;
+    letter-spacing: 0.1rem;
 }
 
 header nav>div {
@@ -102,7 +103,7 @@ header .logo {
 }
 
 header .tel {
-    font-weight: 500;
+    font-weight: 400;
     position: absolute;
     bottom: 0;
     transform: translateY(160%);
@@ -119,19 +120,21 @@ header .tel {
     gap: 0.8rem;
     z-index: 4;
     border-radius: 0.5rem;
-    text-shadow: 0.1rem 0.1rem var(--lightgrey);
+    text-shadow: 0.1rem 0.1rem var(--grey);
+    font-family: 'Libre Bodoni';
 }
 
 header nav a,
 header nav button {
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, background-color 0.3s ease;
     cursor: pointer;
 }
 
 header nav a:hover,
 header nav button:hover {
-    transition: color 0s ease;
+    transition: color 0s ease, background-color 0s ease;
     color: white;
+    background-color: var(--dark);
 }
 
 .award {
@@ -294,11 +297,13 @@ header nav button:hover {
 }
 
 .book.modal h3 {
-    font-size: clamp(1.3rem, 6.6vw, 2rem);
+    font-size: clamp(1.3rem, 6.6vw, 2.3rem);
     color: var(--grey2);
     position: relative;
     padding-bottom: 0.6rem;
     margin: 1.5rem 0 0.4rem;
+    letter-spacing: 0.06rem;
+    font-weight: 500;
 }
 
 .book.modal h3::before {
@@ -474,8 +479,7 @@ header .social .icon {
 
 
 section.intro {
-    height: clamp(50rem, calc(55vh + 65vw + 9rem), 77rem);
-    background-color: #141110;
+    height: clamp(50rem, calc(65vh + 32vw + 9rem), 77rem);
     color: var(--light);
     font-weight: 400;
     background-position: 60% center;
@@ -487,8 +491,8 @@ section.intro {
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
-    background-color: var(--dark);
-    background-image: url(../assets/textures/dark-paper.jpg);
+    background-color: #12100b;
+    /* background-image: url(../assets/textures/dark-paper.jpg); */
 }
 
 .intro .video_ctnr {
@@ -501,18 +505,19 @@ section.intro {
 }
 
 .intro .content {
-    width: clamp(10rem, 84vw, 105rem);
+    width: clamp(10rem, 85vw, 105rem);
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
+    gap: 3rem;
     position: relative;
-    top: 2vh;
+    top: 3vw;
+    top: 5vmin;
 }
 
 .cta {
     transition: filter 0.15s ease;
     font-size: clamp(1.2rem, 3.5vw, 1.6rem);
-    font-weight: 500;
+    font-weight: 400;
     /* letter-spacing: 0.1rem; */
     border-radius: 0.2rem;
     text-align: center;
@@ -520,6 +525,7 @@ section.intro {
     box-shadow: 0 0.1rem;
     border: 0.1rem solid;
     width: fit-content;
+    letter-spacing: 0.06rem;
 }
 
 .cta:hover {
@@ -529,28 +535,32 @@ section.intro {
 h1 {
     display: block;
     text-align: center;
-    font-size: clamp(2rem, calc(0.7vh + 1.4vw + 1.2rem), 3.6rem);
+    font-size: clamp(2rem, calc(0.8vh + 1.8vw + 1.2rem), 3.8rem);
     font-weight: 400;
     letter-spacing: 0.03em;
-    text-shadow: 0.2rem 0.2rem #0e0a0c5c;
+    text-shadow: 0.1rem 0.1rem var(--dark), 0.1rem 0.2rem var(--dark);
     line-height: 1.3;
 }
 
-h1 b {
-    font-weight: 600;
-}
+h1 b, h1 strong {
+    font-weight: 400;
+} h1 strong {color: var(--c2);}
 
 .intro address {
     text-align: center;
-    font-size: clamp(1.1rem, 3.3vw, 1.4rem);
+    font-size: clamp(1.1rem, 3.8vw, 1.25rem);
     letter-spacing: 0.2rem;
-    font-weight: 500;
+    font-weight: 400;
     display: flex;
     gap: 0.8rem;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    text-shadow: 0.2rem 0.2rem #0e0a0c5c;
+    text-shadow: 0.1rem 0.1rem var(--grey);
+    font-style: unset;
+    width: 70%;
+    margin: 0 auto;
+    line-height: 1.4;
 }
 
 .intro .fold {
@@ -608,8 +618,8 @@ address .icon {
     background-image: url(../assets/textures/dark-paper.jpg);
 }
 
-header, .intro, .meet_frederic, .our_menu, .the_road_trip, .luxembourg, footer, .modal, .modal::before, .private_hire, .terrace .content {
-    background-size: cover;
+header, .intro, .meet_frederic, .our_menu, .the_road_trip, .luxembourg, footer, .modal, .modal::before, .private_hire, .terrace .content, .our_menu a, .meet_frederic .expand {
+    background-size: 100vmax;
     background-position: center;
 }
 
@@ -623,7 +633,7 @@ header, .intro, .meet_frederic, .our_menu, .the_road_trip, .luxembourg, footer, 
 
 
 section.meet_frederic {
-    padding: clamp(3rem, 7vw, 8rem) 0 clamp(3rem, 38vw, 18rem);
+    padding: clamp(3rem, 7vw, 8rem) 0 clamp(3rem, 33vw, 18rem);
     background-color: var(--light);
     scroll-margin-top: 10rem;
     background-image: url(../assets/textures/white-paper.jpg);
@@ -661,7 +671,7 @@ section.meet_frederic {
 .luxembourg .content {
     /* color: var(--grey); */
     font-family: 'Montserrat', sans-serif;
-    line-height: 1.45;
+    line-height: 1.5;
 }
 
 .meet_frederic .composition, .meet_frederic .composition img {
@@ -677,15 +687,15 @@ section.meet_frederic {
 
 .meet_frederic h2,
 .our_menu h2 {
-    font-size: clamp(2rem, calc(1.8vw + 1.8vh + 0.6rem), 3.3rem);
-    font-weight: 500;
+    font-size: clamp(2rem, calc(1.8vw + 1.8vh + 0.6rem), 4rem);
+    font-weight: 400;
     margin-bottom: clamp(1rem, 3vw, 1.8rem);
     line-height: 1;
     display: flex;
     flex-flow: row wrap;
     align-items: baseline;
     column-gap: 1rem;
-    max-width: 40rem;
+    max-width: 50rem;
 }
 
 .meet_frederic h2 span {
@@ -694,7 +704,7 @@ section.meet_frederic {
 
 .meet_frederic h2 span,
 .our_menu h2 span {
-    font-weight: 700;
+    font-weight: 500;
     font-size: 1.8em;
 }
 
@@ -754,14 +764,16 @@ section.our_menu {
     background-color: var(--c1);
     background-image: url(../assets/textures/wine-paper.jpg);
     color: white;
-    padding: clamp(3rem, 9vw, 9rem) 0 6rem;
+    padding: clamp(3rem, 9vw, 9rem) 0 clamp(6rem, 9vw, 7rem);
 }
 
 .our_menu h2 {
     color: var(--light);
 }
 
-.our_menu h2 span {}
+.our_menu h2 span {
+    color: var(--c2a);
+}
 
 .our_menu .composition {
     width: clamp(10rem, 100%, 100rem);
@@ -833,8 +845,8 @@ section.our_menu {
 
 .our_menu b,
 .our_menu strong {
-    font-weight: 500;
-    /* color: #CDD; */
+    font-weight: 400;
+    color: var(--c2a);
 }
 
 
@@ -845,7 +857,7 @@ section.our_menu {
 
 
 section.private_hire {
-    padding: clamp(9rem, 33vw, 16rem) 0;
+    padding: clamp(9rem, 33vw, 14rem) 0;
     background-image: url(../assets/textures/white-paper.jpg);
     text-align: center;
     color: var(--grey);
@@ -862,8 +874,8 @@ section.private_hire {
 }
 
 .private_hire h2 {
-    font-size: clamp(2rem, calc(2vw + 2vh + 0.6rem), 3.3rem);
-    font-weight: 700;
+    font-size: clamp(2rem, calc(3vw + 2.5vh + 0.6rem), 5rem);
+    font-weight: 500;
 }
 
 .private_hire p {
@@ -881,6 +893,7 @@ section.private_hire {
     font-weight: 700;
     border-width: 0.2rem;
     box-shadow: 0 0.2rem;
+    background-color: var(--light);
 }
 
 
@@ -894,6 +907,7 @@ section.private_hire {
 section.terrace {
     height: clamp(50rem, 230vw, 100rem);
     max-height: 110vh;
+    min-height: 50rem;
     background-image: url(../assets/photos/terrace.jpg);
     background-size: cover;
     background-attachment: fixed;
@@ -911,7 +925,6 @@ section.terrace {
 .terrace .content {
     background-color: var(--light);
     background-image: url(../assets/textures/white-paper.jpg);
-    background-attachment: fixed;
     color: var(--grey);
     padding: clamp(2rem, 7.5vw, 4rem);
     border-radius: 0.3rem;
@@ -932,10 +945,11 @@ section.terrace {
 }
 
 .terrace h2 {
-    font-size: clamp(2rem, calc(2vw + 2vh + 0.6rem), 3.3rem);
+    font-size: clamp(2rem, calc(2vw + 2vh + 0.6rem), 4.5rem);
     color: inherit;
     position:relative;
     padding-bottom: 1rem;
+    font-weight: 500;
 }.terrace h2::before {
     content: '';
     background-color: var(--c1a);
@@ -961,6 +975,7 @@ section.terrace {
 .terrace .cta_ctnr .menu {
     color: var(--c1a);
     font-weight: 700;
+    background-image: url(../assets/textures/white-paper.jpg);
 }
 
 .terrace .cta_ctnr .contact_bt {
@@ -1012,12 +1027,11 @@ section.the_road_trip {
 }
 
 .video_ctnr video {
-    /* opacity: 0.8; */
     height: 100%;
     width: 100vw;
     object-fit: cover;
-    background-color: #51594e;
-    /* opacity: 0.6; */
+    background-color: var(--dark);
+    opacity: 0.4;
 }
 
 .the_road_trip h2 {
@@ -1028,10 +1042,10 @@ section.the_road_trip {
     margin: 0 auto;
     left: 0;
     right: 0;
-    font-size: clamp(4rem, 7vw, 7rem);
+    font-size: clamp(4rem, 11vw, 7rem);
     color: var(--light);
     /* mix-blend-mode: luminosity; */
-    font-weight: 700;
+    font-weight: 500;
     text-align: center;
     transform: translateY(-50%);
     line-height: 1;
@@ -1101,7 +1115,7 @@ section.the_road_trip {
 section.luxembourg {
     background-color: white;
     justify-content: unset;
-    padding: 0 0 clamp(4rem, 5vw, 9rem);
+    padding: clamp(4rem, 5vw, 9rem) 0;
     background-image: url(../assets/textures/white-paper.jpg);
 }
 
@@ -1110,7 +1124,6 @@ section.luxembourg {
     overflow-x: auto;
     display: flex;
     border-radius: clamp(2rem, 6vw, 3.5rem);
-    margin: calc(clamp(3rem, 5vw, 5rem) * -1) 0 0;
     max-width: 75rem;
     gap: 3rem;
     scroll-snap-type: x mandatory;
@@ -1142,8 +1155,8 @@ section.luxembourg {
 }
 
 .luxembourg h2 {
-    font-size: clamp(3rem, calc(3.5vw + 2.6vh + 1rem), 6rem);
-    font-weight: 700;
+    font-size: clamp(3rem, calc(3.6vw + 3vh + 1rem), 6rem);
+    font-weight: 500;
     margin-bottom: 1rem;
     line-height: 1;
     color: var(--c1a);
@@ -1238,7 +1251,7 @@ footer .opening_hours {
     font-family: 'Montserrat';
     display: flex;
     flex-direction: column;
-    font-size: 1.5rem;
+    font-size: clamp(1.3rem, 3.5vw, 1.4rem);
     line-height: 1.4;
     font-weight: 300;
     gap: 0.6rem;
@@ -1266,18 +1279,18 @@ footer .opening_hours {
 }
 
 footer .opening_hours h2 {
-    font-weight: 600;
+    font-weight: 400;
     font-size: 3rem;
-    color: var(--c2);
+    color: var(--grey2);
     letter-spacing: 0.1rem;
 }
 
 footer .opening_hours h3 {
-    font-weight: 600;
+    font-weight: 400;
     margin: 1.3rem 0 0;
-    font-size: 1.8rem;
-    letter-spacing: 0.3rem;
-    color: var(--lightgrey);
+    font-size: clamp(1.3rem, 6.6vw, 2.3rem);
+    letter-spacing: 0.06rem;
+    color: var(--c2a);
 }
 
 footer nav {
@@ -1408,7 +1421,7 @@ footer nav {
     header nav>div {
         flex-flow: row wrap;
         position: absolute;
-        column-gap: 4rem;
+        column-gap: 1.5rem;
         row-gap: 1rem;
     }
 
@@ -1427,6 +1440,8 @@ footer nav {
         /* width: clamp(10rem, 16vw, 20rem); */
         min-width: 4vw;
         width: unset;
+        padding: 0.9rem 1.5rem;
+        border-radius: 0.2rem;
     }
 
     header .width {
@@ -1462,9 +1477,7 @@ footer nav {
     header .icon.tel {
         transition: transform 0.3s ease, background-color 0.3s ease;
         transform: translateY(-250%);
-        color: var(--lightgrey);
         z-index: 5;
-        font-weight: 600;
         padding: 0.6rem;
         line-height: 1.1;
         text-shadow: unset;
@@ -1489,8 +1502,13 @@ footer nav {
         background-color: var(--dark);
     }
 
+    h1 {
+        text-shadow: 0.1rem 0.1rem rgb(28 34 38 / 50%), 0.1rem 0.2rem rgb(28 34 38 / 50%);
+    }
+
     .intro .video_ctnr video {
         object-position: top;
+        opacity: 0.6;
     }
 
     .intro address {
@@ -1530,7 +1548,7 @@ footer nav {
 
     .meet_frederic .composition {
         width: clamp(35rem, 38vw, 50rem);
-        margin-top: unset;
+        margin-top: -3%;
         margin-bottom: 0;
         display: flex;
     }
@@ -1560,7 +1578,6 @@ footer nav {
     }
 
     section.our_menu {
-        padding-bottom: 9rem;
     }
 
     .our_menu .composition {
@@ -1569,7 +1586,7 @@ footer nav {
     }
 
     .our_menu .video_composition {
-        margin-top: -19%;
+        margin-top: -15%;
     }
 
     .terrace .width {
@@ -1592,6 +1609,7 @@ footer nav {
         width: clamp(50rem, 40vw, 70rem);
         min-width: 50rem;
         scroll-snap-type: unset;
+        margin: 0;
     }
 
     .luxembourg .showoff div {
