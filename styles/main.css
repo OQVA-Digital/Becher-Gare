@@ -106,7 +106,7 @@ header .tel {
     font-weight: 400;
     position: absolute;
     bottom: 0;
-    transform: translateY(160%);
+    transform: translateY(200%);
     font-size: clamp(1rem, 3vw, 1.2rem);
     letter-spacing: clamp(0.1em, 0.6vw, 0.2em);
     width: fit-content;
@@ -491,7 +491,7 @@ section.intro {
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
-    background-color: #12100b;
+    background-color: #000;
     /* background-image: url(../assets/textures/dark-paper.jpg); */
 }
 
@@ -505,13 +505,13 @@ section.intro {
 }
 
 .intro .content {
-    width: clamp(10rem, 85vw, 105rem);
+    width: clamp(10rem, 83vw, 105rem);
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 2.5rem;
     position: relative;
     top: 3vw;
-    top: 5vmin;
+    top: 4vmin;
 }
 
 .cta {
@@ -535,7 +535,7 @@ section.intro {
 h1 {
     display: block;
     text-align: center;
-    font-size: clamp(2rem, calc(0.8vh + 1.8vw + 1.2rem), 3.8rem);
+    font-size: clamp(2rem, calc(0.9vh + 2.1vw + 0.9rem), 3.8rem);
     font-weight: 400;
     letter-spacing: 0.03em;
     text-shadow: 0.1rem 0.1rem var(--dark), 0.1rem 0.2rem var(--dark);
@@ -544,23 +544,25 @@ h1 {
 
 h1 b, h1 strong {
     font-weight: 400;
-} h1 strong {color: var(--c2);}
+} h1 strong {color: var(--c2);white-space: break-spaces;}
 
 .intro address {
     text-align: center;
-    font-size: clamp(1.1rem, 3.8vw, 1.25rem);
+    font-size: clamp(1.1rem, 3.8vw, 1.3rem);
     letter-spacing: 0.2rem;
-    font-weight: 400;
+    font-weight: 500;
     display: flex;
     gap: 0.8rem;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    text-shadow: 0.1rem 0.1rem var(--grey);
     font-style: unset;
     width: 70%;
     margin: 0 auto;
     line-height: 1.4;
+    color: var(--lightgrey2);
+    font-style: italic;
+    font-family: 'Libre Bodoni';
 }
 
 .intro .fold {
@@ -570,7 +572,7 @@ h1 b, h1 strong {
     height: 4rem;
     border-radius: 50%;
     position: absolute;
-    bottom: -8rem;
+    bottom: calc(clamp(6rem, 16vw, 9rem) * -1);
     left: 0;
     right: 0;
     display: flex;
@@ -580,10 +582,10 @@ h1 b, h1 strong {
 
 .intro .fold::after {
     content: '';
-    width: 1.5rem;
-    height: 1.5rem;
-    border-right: 0.2rem solid var(--c2);
-    border-bottom: 0.2rem solid var(--c2);
+    width: 1.4rem;
+    height: 1.4rem;
+    border-right: 0.1rem solid var(--light);
+    border-bottom: 0.1rem solid var(--light);
     transform: rotate(45deg);
 }
 
@@ -599,6 +601,7 @@ address .icon {
     gap: clamp(2rem, 3vw, 2.5rem);
     align-items: center;
     flex-direction: row;
+    margin-top: 1rem;
 }
 
 .intro .cta_ctnr .menu {
@@ -1031,7 +1034,7 @@ section.the_road_trip {
     width: 100vw;
     object-fit: cover;
     background-color: var(--dark);
-    opacity: 0.4;
+    opacity: 0.5;
 }
 
 .the_road_trip h2 {
