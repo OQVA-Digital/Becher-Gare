@@ -49,6 +49,10 @@ body {
     font-size: 1.6rem;
 }
 
+b, strong {
+    font-weight: inherit;
+}
+
 a {
     text-decoration: none;
     -webkit-tap-highlight-color: transparent;
