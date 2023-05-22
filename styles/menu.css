@@ -104,7 +104,7 @@ section h2 {
     background-color: white;
     position: sticky;
     top: 0;
-    font-weight: 700;
+    font-weight: 500;
     font-size: clamp(2.5rem, 7vw, 3.5rem);
     margin-bottom: 1rem;
     z-index: 4;
@@ -159,6 +159,8 @@ article>div {
     padding: 0 0.4rem;
     text-decoration-color: var(--lightgrey);
     transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: 'Libre Bodoni', serif;
+    font-weight: 600;
 }
 
 .catalogue>div:hover>p:last-of-type {
@@ -190,8 +192,8 @@ article>div {
     background-size: 17%;
     background-repeat: no-repeat;
     background-position: center;
-    background-color: #EEE;
-    border: 0.1rem solid var(--light);
+    background-color: var(--light);
+    border: 0.1rem solid transparent;
     margin-top: 0.2rem;
     /* position: relative; */
     cursor: help;
