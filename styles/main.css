@@ -1485,6 +1485,7 @@ footer nav {
 
     .award {
         left: 0;
+        transform: translateY(50%);
     }
 
     header nav .divider {
