@@ -820,7 +820,7 @@ section.our_menu {
 .our_menu .video_composition video:nth-of-type(1) {
     left: 0;
     top: clamp(3rem, 8vw, 9rem);
-    z-index: 3;
+    z-index: 1;
     background-image: url(../assets/video/food/01-poster.jpg);
 }
 
@@ -836,14 +836,14 @@ section.our_menu {
 .our_menu .video_composition video:nth-of-type(3) {
     right: 0;
     top: clamp(6rem, 14vw, 15rem);
-    z-index: 1;
+    z-index: 3;
     background-image: url(../assets/video/food/03-poster.jpg);
 }
 
 .our_menu .video_composition picture {
     position: absolute;
     left: clamp(3rem, 6vw, 11rem);
-    top: clamp(8rem, 21vw, 31rem);
+    top: clamp(8rem, 21vw, 30rem);
 }
 
 .our_menu .video_composition picture, .our_menu .video_composition picture img {
@@ -1572,6 +1572,16 @@ footer nav {
     .our_menu .video_composition {
         margin-top: -15%;
         flex: 1;
+    }
+
+    .our_menu .video_composition video {
+        width: clamp(10rem, 20vw, 34rem);
+        height: calc(clamp(10rem, 20vw, 34rem) * 1.45);
+    }
+    
+    .our_menu .video_composition picture, .our_menu .video_composition picture img {width: clamp(5rem, 15vw, 26rem);}
+
+    .our_menu .video_composition picture {
     }
 
     .terrace .width {
