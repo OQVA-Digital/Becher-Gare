@@ -498,12 +498,15 @@ section.intro {
 .intro .video_ctnr {
     position: absolute;
     height: 100%;
+    background-image: url(../assets/video/hero-poster.jpg);
+    background-size: cover;
+    background-position: 24% top;
 }
 
 .intro .video_ctnr video {
     object-position: 23% 0;
-    opacity: 0.6;
     background-image: url(../assets/video/hero-poster.jpg);
+    filter: brightness(0.6);
 }
 
 .intro .content {
@@ -1483,7 +1486,6 @@ footer nav {
 
     .intro .video_ctnr video {
         object-position: top;
-        opacity: 0.6;
     }
 
     .intro address {
