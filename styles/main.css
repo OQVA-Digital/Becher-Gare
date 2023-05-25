@@ -503,6 +503,7 @@ section.intro {
 .intro .video_ctnr video {
     object-position: 23% 0;
     opacity: 0.6;
+    background-image: url(../assets/video/hero-poster.jpg);
 }
 
 .intro .content {
@@ -538,11 +539,11 @@ section.intro {
 h1 {
     display: block;
     text-align: center;
-    font-size: clamp(2rem, calc(0.9vh + 2.1vw + 0.9rem), 3.8rem);
+    font-size: clamp(2rem, calc(0.9vh + 2vw + 0.9rem), 3.8rem);
     font-weight: 400;
     letter-spacing: 0.03em;
     text-shadow: 0.1rem 0.1rem var(--dark), 0.1rem 0.2rem var(--dark);
-    line-height: 1.3;
+    line-height: 1.35;
     margin-bottom: 1rem;
 }
 
@@ -628,7 +629,7 @@ address .icon {
 }
 
 header, .intro, .meet_frederic, .our_menu, .the_road_trip, .luxembourg, footer, .modal, .modal::before, .private_hire, .terrace .content, .our_menu a, .meet_frederic .expand {
-    background-size: 100vmax;
+    background-size: 110vmax;
     background-position: center;
 }
 
@@ -684,7 +685,7 @@ section.meet_frederic {
 }
 
 .meet_frederic .composition, .meet_frederic .composition img {
-    width: clamp(10rem, 100%, 50rem);
+    width: clamp(10rem, 86vw, 50rem);
     max-height: 80vh;
     max-width: 80vw;
     flex: 1;
@@ -774,7 +775,7 @@ section.our_menu {
     background-color: var(--c1);
     background-image: url(../assets/textures/wine-paper.jpg);
     color: white;
-    padding: clamp(3rem, 9vw, 9rem) 0 clamp(6rem, 9vw, 7rem);
+    padding: clamp(3rem, 9vw, 9rem) 0 clamp(6rem, 9vw, 9rem);
 }
 
 .our_menu h2 {
@@ -799,21 +800,23 @@ section.our_menu {
     margin-top: -34%;
     position: relative;
     filter: drop-shadow(-1.2rem 1.2rem 0 #00000010);
-    height: clamp(26rem, 70vw, 64rem);
+    height: clamp(21rem, 80vw, 64rem);
     margin-inline: auto;
 }
 
 .our_menu .video_composition video {
     position: absolute;
-    width: clamp(10rem, 42%, 34rem);
+    width: clamp(10rem, 42vw, 34rem);
+    height: calc(clamp(10rem, 42vw, 34rem) * 1.45);
     border-radius: 0.2rem;
-    background-color: #7f8f9980;
+    /* background-color: #7f8f9980; */
 }
 
 .our_menu .video_composition video:nth-of-type(1) {
     left: 0;
     top: clamp(3rem, 8vw, 9rem);
     z-index: 3;
+    background-image: url(../assets/video/food/01-poster.jpg);
 }
 
 .our_menu .video_composition video:nth-of-type(2) {
@@ -822,20 +825,25 @@ section.our_menu {
     margin: 0 auto;
     top: 0;
     z-index: 2;
+    background-image: url(../assets/video/food/02-poster.jpg);
 }
 
 .our_menu .video_composition video:nth-of-type(3) {
     right: 0;
     top: clamp(6rem, 14vw, 15rem);
     z-index: 1;
+    background-image: url(../assets/video/food/03-poster.jpg);
 }
 
 .our_menu .video_composition picture {
     position: absolute;
-    width: clamp(5rem, 40%, 28rem);
     left: clamp(3rem, 6vw, 11rem);
-    top: clamp(8rem, 16vw, 23rem);
-    z-index: 4;
+    top: clamp(8rem, 21vw, 31rem);
+}
+
+.our_menu .video_composition picture, .our_menu .video_composition picture img {
+    width: clamp(5rem, 40vw, 26rem);
+    z-index: 1;
 }
 
 .our_menu p {}
@@ -918,7 +926,6 @@ section.terrace {
     height: clamp(50rem, 230vw, 100rem);
     max-height: 110vh;
     min-height: 50rem;
-    /* background-image: url(../assets/photos/terrace.jpg); */
     background-size: cover;
     background-attachment: fixed;
     background-position: top center;
@@ -926,6 +933,9 @@ section.terrace {
     background-color: var(--grey);
     position: relative;
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    background-image: url(../assets/video/terrace-poster.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 .terrace video {
@@ -935,6 +945,7 @@ section.terrace {
     object-position: center;
     width: 100%;
     height: 100%;
+    background-image: url(../assets/video/terrace-poster.jpg);
 }
 
 .terrace .width {
@@ -1058,6 +1069,10 @@ section.the_road_trip {
     object-position: bottom;
 }
 
+.the_road_trip .video_ctnr video {
+    background-image: url(../assets/video/roadtrip-poster.jpg);
+}
+
 .the_road_trip h2 {
     position: absolute;
     top: 50%;
@@ -1137,73 +1152,6 @@ section.the_road_trip {
 
 
 
-
-
-
-/* section.luxembourg {
-    background-color: white;
-    justify-content: unset;
-    padding: clamp(4rem, 5vw, 9rem) 0;
-    background-image: url(../assets/textures/white-paper.jpg);
-}
-
-.luxembourg .showoff {
-    width: 100%;
-    overflow-x: auto;
-    display: flex;
-    border-radius: clamp(2rem, 6vw, 3.5rem);
-    max-width: 75rem;
-    gap: 3rem;
-    scroll-snap-type: x mandatory;
-    z-index: 1;
-}
-
-.luxembourg .showoff div {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-width: 100%;
-    height: 90vw;
-    max-height: 70vh;
-    border-radius: clamp(2rem, 6vw, 3.5rem);
-    scroll-snap-align: center;
-}
-
-.luxembourg .showoff div:nth-child(1) {
-    background-image: url(../assets/photos/outdoor/01.jpg);
-}
-
-.luxembourg .showoff div:nth-child(2) {
-    background-image: url(../assets/photos/outdoor/02.jpg);
-}
-
-.luxembourg .showoff div:nth-child(3) {
-    background-image: url(../assets/photos/outdoor/03.jpg);
-}
-
-.luxembourg h2 {
-    font-size: clamp(3rem, calc(3.6vw + 3vh + 1rem), 6rem);
-    font-weight: 500;
-    margin-bottom: 1rem;
-    line-height: 1;
-    color: var(--c1a);
-}
-
-.luxembourg .content {
-    font-size: clamp(1.15rem, 4vw, 1.8rem);
-    font-weight: 500;
-}
-
-.luxembourg .content p {}
-
-.luxembourg b,
-.luxembourg strong {
-    color: var(--c1a);
-}
-
-.luxembourg .width {
-    gap: clamp(1rem, 6vw, 9rem);
-} */
 
 
 
@@ -1466,7 +1414,7 @@ footer nav {
         /* width: clamp(10rem, 16vw, 20rem); */
         min-width: 4vw;
         width: unset;
-        padding: 0.9rem 1.5rem;
+        padding: clamp(0rem, calc(10vw - 11rem), 0.9rem) clamp(0.5rem, calc(10vw - 11rem), 2rem);
         border-radius: 0.2rem;
     }
 
@@ -1480,12 +1428,12 @@ footer nav {
         flex-direction: revert;
         /* transform: unset; */
         right: 0;
-        transform: translateY(50%);
+        /* transform: translateY(3rem); */
+        bottom: 0;
     }
 
     .award {
         left: 0;
-        transform: translateY(50%);
     }
 
     header nav .divider {

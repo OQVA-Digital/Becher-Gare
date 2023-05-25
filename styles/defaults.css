@@ -39,7 +39,7 @@ h6 {
 
 h1, h2, h3 {
     font-family: 'Libre Bodoni';
-    text-shadow: 0.1rem 0.1rem rgb(28 34 38 / 24%);
+    /* text-shadow: 0.1rem 0.1rem rgb(28 34 38 / 24%); */
 }
 
 body {
@@ -68,6 +68,12 @@ img {
     object-fit: contain;
     max-height: inherit;
     width: 100%;
+    display: block;
+}
+
+video {
+    background-size: cover;
+    background-position: center;
 }
 
 .mobile_hidden {
