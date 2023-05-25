@@ -798,12 +798,11 @@ section.our_menu {
 
 .our_menu .video_composition {
     width: clamp(10rem, 100%, 86rem);
-    max-height: 90vh;
-    max-width: 100vmin;
+    /* max-width: 100vmin; */
     margin-top: -34%;
     position: relative;
     filter: drop-shadow(-1.2rem 1.2rem 0 #00000010);
-    height: clamp(21rem, 80vw, 64rem);
+    height: clamp(21rem, 80vw, 60rem);
     margin-inline: auto;
 }
 
@@ -813,6 +812,9 @@ section.our_menu {
     height: calc(clamp(10rem, 42vw, 34rem) * 1.45);
     border-radius: 0.2rem;
     /* background-color: #7f8f9980; */
+    max-height: 90vh;
+    max-width: 50%;
+    object-fit: cover;
 }
 
 .our_menu .video_composition video:nth-of-type(1) {
