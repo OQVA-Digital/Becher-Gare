@@ -26,9 +26,9 @@ header .return {
     left: clamp(1rem, 3vw, 3rem);
     width: fit-content;
     border-radius: 10rem;
-    background-color: transparent;
-} header .return:hover {
     background-color: rgb(231 221 164 / 10%);
+} header .return:hover {
+    background-color: var(--c1b);
 }
 
 header .return div {
@@ -71,13 +71,13 @@ main {
     align-items: center;
     border-left: solid;
     border-right: solid;
-    padding: 3rem 0 12rem;
+    padding: 3rem 0 clamp(12rem, 15vw, 30rem);
     border-width: clamp(0.6rem, 1.5vw, 1.2rem);
     border-color: var(--c1);
 }
 
 h1 {
-    font-size: clamp(1.5rem, 9vw, 6rem);
+    font-size: clamp(1.5rem, 12vw, 6rem);
     font-weight: 500;
     text-align: center;
     margin: clamp(2rem, calc(2vh + 2vw), 4rem) 0;
@@ -113,6 +113,11 @@ section h2 {
     background-size: cover;
 }
 
+.heading.flex {
+    gap: 1rem;
+    align-items: center;
+}
+
 section h2::before {
     content: '';
     background-color: var(--c1a);
@@ -142,7 +147,7 @@ main>hr {
 }
 
 .catalogue>div,
-article>div {
+article>div, .catalogue .deal > div {
     display: flex;
     align-items: flex-end;
     gap: 1rem;
@@ -150,9 +155,26 @@ article>div {
     justify-content: space-between;
     line-height: 1.4;
     padding: 0.9rem 0;
+    flex-direction: row;
 }
 
-.catalogue>div>p:last-of-type {
+.catalogue .deal {
+    flex-direction: column;
+    padding: 1rem 2.6rem 1.8rem;
+    border: 0.1rem solid var(--light);
+    margin-top: 2rem;
+    align-items: initial;
+    gap: 0.6rem;
+    box-shadow: 0 1rem 3rem -1rem rgb(69 46 61 / 15%);
+}
+
+/* .catalogue .deal > div {
+    padding: 0.4rem 0;
+} */
+
+.catalogue .deal .item_name {font-weight: 700;}
+
+.catalogue .price {
     /* font-weight: 700; */
     /* text-decoration: underline; */
     text-underline-offset: 0.4rem;
@@ -161,9 +183,11 @@ article>div {
     transition: background-color 0.3s ease, color 0.3s ease;
     font-family: 'Libre Bodoni', serif;
     font-weight: 600;
+    color: var(--grey);
+    letter-spacing: 0.06rem;
 }
 
-.catalogue>div:hover>p:last-of-type {
+.catalogue>div:hover .price {
     color: var(--c1a);
     /* text-decoration: underline; */
     background-color: #F6F6F6;
@@ -177,6 +201,7 @@ article>div {
     gap: 1rem;
     position: relative;
     justify-content: center;
+    flex-direction: row-reverse;
 }
 
 .allergens_bt {
@@ -193,11 +218,16 @@ article>div {
     background-repeat: no-repeat;
     background-position: center;
     background-color: var(--light);
-    border: 0.1rem solid transparent;
+    border: 0.1rem solid #CCC;
     margin-top: 0.2rem;
     /* position: relative; */
     cursor: help;
     transition: border-color 0.3s ease, z-index 0s 0.8s linear;
+    position: relative;
+}
+
+.catalogue .allergens_bt {
+    position: relative;
 }
 
 .allergens_bt:hover {

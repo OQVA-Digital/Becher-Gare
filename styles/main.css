@@ -21,6 +21,7 @@ header {
     top: 0;
     height: clamp(10rem, 30vw, 12rem);
     backdrop-filter: blur(0.5rem);
+    -webkit-backdrop-filter: blur(0.5rem);
     will-change: transform;
 }
 
@@ -510,7 +511,7 @@ section.intro {
 }
 
 .intro .content {
-    width: clamp(10rem, 83vw, 105rem);
+    width: clamp(10rem, 88vw, 84.2rem);
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -539,20 +540,37 @@ section.intro {
     filter: brightness(1.2);
 }
 
-h1 {
+.intro h1 {
     display: block;
     text-align: center;
-    font-size: clamp(2rem, calc(0.9vh + 2vw + 0.9rem), 3.8rem);
+    font-size: clamp(2rem, calc(1.2vh + 2.8vw + 0.4rem), 4rem);
     font-weight: 400;
     letter-spacing: 0.03em;
     text-shadow: 0.1rem 0.1rem var(--dark), 0.1rem 0.2rem var(--dark);
     line-height: 1.35;
-    margin-bottom: 1rem;
+    margin-bottom:0.6rem;
 }
 
 h1 b, h1 strong {
     font-weight: 400;
-} h1 strong {color: var(--c2);white-space: nowrap;}
+}
+
+h1 strong {
+    color: var(--c2);
+    white-space: nowrap;
+}
+
+.intro h2 {
+    font-size: clamp(1rem, calc(0.5vh + 1.2vw + 0.4rem), 1.7rem);
+    font-weight: 400;
+    text-align: center;
+    font-family: 'Montserrat';
+    line-height: 2rem;
+    line-height: 1.5;
+    max-width: 64rem;
+    margin-inline: auto;
+    letter-spacing: 0.1rem;
+}
 
 .intro address {
     text-align: center;
@@ -612,6 +630,7 @@ address .icon {
     gap: clamp(2rem, 3vw, 2.5rem);
     align-items: center;
     flex-direction: row;
+    margin-top: 2;
 }
 
 .intro .cta_ctnr .menu {
@@ -631,32 +650,53 @@ address .icon {
     background-image: url(../assets/textures/dark-paper.jpg);
 }
 
-header, .intro, .meet_frederic, .our_menu, .the_road_trip, .luxembourg, footer, .modal, .modal::before, .private_hire, .terrace .content, .our_menu a, .meet_frederic .expand {
+header, .intro, .meet_the_team, .our_menu, .the_road_trip, .luxembourg, footer, .modal, .modal::before, .private_hire, .terrace .content, .our_menu a, .meet_the_team .expand {
     background-size: 110vmax;
     background-position: center;
 }
 
 
+section.intro_txt {
+    padding: clamp(3rem, 11vw, 10rem) 0 clamp(3rem, 11vw, 13rem);
+}
+
+.intro_txt p {
+    margin-bottom: clamp(1.5rem, 3vmin, 3rem);
+    line-height: 1.45;
+    font-size: clamp(1.15rem, 4.2vw, 2.5rem);
+    font-family: 'Libre Bodoni';
+    text-align: center;
+    font-weight: 500;
+    color: var(--grey);
+    letter-spacing: 0.03rem;
+    margin-inline: auto;
+    max-width: 81rem;
+    line-height: 1.55;
+    text-shadow: 0.1rem 0.1rem var(--light);
+}
+
+.intro_txt p b, .intro_txt p strong {/* font-weight: 600; */color: var(--c1a);}
 
 
 
 
 
-
-
-
-section.meet_frederic {
-    padding: clamp(3rem, 7vw, 8rem) 0 clamp(3rem, 33vw, 18rem);
+section.meet_the_team, section.intro_txt, section.reviews {
     background-color: var(--light);
     scroll-margin-top: 10rem;
     background-image: url(../assets/textures/white-paper.jpg);
 }
 
-.meet_frederic .width {
+section.meet_the_team {
+    padding: 0 0 clamp(3rem, 33vw, 18rem);
+    scroll-margin: 16rem;
+}
+
+.meet_the_team .width {
     position: relative;
 }
 
-.meet_frederic .width,
+.meet_the_team .width,
 .our_menu .width {
     width: var(--width);
     display: flex;
@@ -666,9 +706,9 @@ section.meet_frederic {
     z-index: 1;
 }
 
-.meet_frederic .content {
+.meet_the_team .content {
     font-weight: 500;
-    font-size: clamp(1.15rem, 3.8vw, 1.75rem);
+    font-size: clamp(1.15rem, 4vw, 1.75rem);
     /* max-width: 45rem; */
     color: var(--grey);
     max-height: 30rem;
@@ -678,63 +718,56 @@ section.meet_frederic {
     transition: max-height 0.4s ease;
 }
 
-.meet_frederic .content,
+.meet_the_team .content,
 .our_menu .content,
 .the_road_trip .content,
 .luxembourg .content {
     /* color: var(--grey); */
     font-family: 'Montserrat', sans-serif;
-    line-height: 1.5;
+    line-height: 1.55;
 }
 
-.meet_frederic .composition, .meet_frederic .composition img {
+.meet_the_team .composition, .meet_the_team .composition img {
     width: clamp(10rem, 86vw, 50rem);
     max-height: 80vh;
     max-width: 80vw;
     flex: 1;
 }
 
-.meet_frederic h2 {
-    color: var(--grey2);
+.meet_the_team h2 {
+    color: var(--dark);
 }
 
-.meet_frederic h2,
-.our_menu h2 {
-    font-size: clamp(2rem, calc(2vw + 2vh + 0.8rem), 4rem);
-    font-weight: 400;
+.meet_the_team h2, .our_menu h2, .reviews h3 {
+    font-size: clamp(2rem, 4vmax, 5rem);
+    font-weight: 500;
     margin-bottom: clamp(1rem, 3vw, 1.8rem);
-    line-height: 1;
-    display: flex;
-    flex-flow: row wrap;
-    align-items: baseline;
-    column-gap: 1rem;
-    row-gap: 0.4rem;
-    max-width: 50rem;
+    line-height: 1.15;
+    letter-spacing: 0.05rem;
 }
 
-.meet_frederic h2 span {
+.meet_the_team h2 span {
     color: var(--c1a);
 }
 
-.meet_frederic h2 span,
+.meet_the_team h2 span,
 .our_menu h2 span {
-    font-weight: 500;
-    font-size: 1.8em;
+    /* font-weight: 500; */
 }
 
-.meet_frederic p,
+.meet_the_team p,
 .our_menu p,
 .the_road_trip p,
 .luxembourg p {
     margin-bottom: 0.9rem;
 }
 
-.meet_frederic b,
-.meet_frederic strong {
+.meet_the_team b,
+.meet_the_team strong {
     color: var(--c1a);
 }
 
-.meet_frederic .expand {
+.meet_the_team .expand {
     display: block;
     position: absolute;
     bottom: -1rem;
@@ -749,7 +782,7 @@ section.meet_frederic {
     background-image: url(../assets/textures/white-paper.jpg);
 }
 
-.meet_frederic .expand::before {
+.meet_the_team .expand::before {
     content: '';
     position: absolute;
     left: 0.9rem;
@@ -783,10 +816,13 @@ section.our_menu {
 
 .our_menu h2 {
     color: var(--light);
+    font-size: clamp(2rem, calc(2vw + 2vh + 0.8rem), 4rem);
+    font-weight: 400;
 }
 
 .our_menu h2 span {
     color: var(--c2a);
+    font-size: 1.8em;
 }
 
 .our_menu .composition {
@@ -908,7 +944,9 @@ section.private_hire {
 }
 
 .private_hire p b,
-.private_hire p strong {color: var(--c1a);}
+.private_hire p strong {
+    color: var(--c1a);
+}
 
 .private_hire .cta {
     font-weight: 600;
@@ -927,12 +965,89 @@ section.private_hire {
 
 
 
+
+
+
+
+section.reviews {
+    padding: clamp(3rem, 9vw, 6rem) 0 0;
+    position: relative;
+    z-index: 1;
+    outline: 0.2rem solid var(--light);
+    outline-offset: calc(clamp(1rem, 3vw, 2.3rem) * -1);
+}
+
+.reviews > .width {
+
+}
+
+.reviews .content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4.1rem;
+    flex-flow: row wrap;
+    margin-bottom: -5rem;
+}
+
+.reviews .box {
+    width: clamp(14rem, 85vw, 33rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3.5rem clamp(2rem, 2vw, 2.5rem) 2.5rem;
+    box-sizing: border-box;
+    border: 0.1rem solid var(--c2a);
+    border-radius: 0.3rem 0.3rem 1.8rem 0.3rem;
+    box-shadow: 0 1rem 3rem -1rem rgb(69 46 61 / 50%);
+    background-color: rgb(255 255 255 / 70%);
+    backdrop-filter: blur(0.9rem);
+    -webkit-backdrop-filter: blur(0.9rem);
+}
+
+.reviews .logo {
+    max-width: 26rem;
+}
+
+.reviews h3 {
+    color: var(--c1a);
+    text-align: center;
+    margin: 2rem auto clamp(2rem, 10vw, 4rem);
+}
+
+.reviews blockquote {
+    text-align: center;
+    margin: 0;
+    width: 100%;
+    font-size: clamp(1.4rem, 3.3vmin, 1.5rem);
+    line-height: 1.4;
+    font-weight: 500;
+    color: var(--dark);
+}
+
+.reviews blockquote p {margin-bottom: 1rem;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 section.terrace {
-    height: clamp(50rem, 230vw, 100rem);
+    height: clamp(50rem, 250vw, 110rem);
     max-height: 110vh;
     min-height: 50rem;
     background-size: cover;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     background-position: top center;
     color: var(--light);
     background-color: var(--grey);
@@ -962,7 +1077,7 @@ section.terrace {
 
 .terrace .content {
     background-color: var(--light);
-    background-image: url(../assets/textures/white-paper.jpg);
+    /* background-image: url(../assets/textures/white-paper.jpg); */
     color: var(--grey);
     padding: clamp(2rem, 7.5vw, 4rem);
     border-radius: 0.3rem;
@@ -974,8 +1089,11 @@ section.terrace {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    margin: calc(clamp(10rem, 30vw, 12rem) * 0.6) 0;
+    margin: calc(clamp(10rem, 30vw, 12rem) * 1) 0 calc(clamp(10rem, 30vw, 12rem) * 0.6) 0;
     box-shadow: 0rem 2rem 3rem -3rem var(--dark);
+    background-color: rgb(255 255 255 / 70%);
+    backdrop-filter: blur(0.9rem);
+    -webkit-backdrop-filter: blur(0.9rem);
 }
 
 .terrace {
@@ -985,10 +1103,12 @@ section.terrace {
 .terrace h2 {
     font-size: clamp(2rem, calc(2vw + 2vh + 0.6rem), 4.5rem);
     color: inherit;
-    position:relative;
+    position: relative;
     padding-bottom: 1rem;
     font-weight: 500;
-}.terrace h2::before {
+}
+
+.terrace h2::before {
     content: '';
     background-color: var(--c1a);
     position: absolute;
@@ -999,10 +1119,12 @@ section.terrace {
 }
 
 .terrace .content p {
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1.5;
     font-size: clamp(1.3rem, 3.5vw, 1.6rem);
-} .terrace .content b {
+}
+
+.terrace .content b {
     color: var(--c1a);
 }
 
@@ -1072,6 +1194,7 @@ section.the_road_trip {
     object-fit: cover;
     background-color: var(--dark);
     object-position: bottom;
+    box-sizing: border-box;
 }
 
 .the_road_trip .video_ctnr video {
@@ -1108,8 +1231,8 @@ section.the_road_trip {
 }
 
 .the_road_trip .composition,
-.meet_frederic .composition {
-    margin-top: calc(clamp(7rem, calc(18vh + 10vw - 12rem), 16rem) * -1);
+.meet_the_team .composition {
+    /* margin-top: calc(clamp(7rem, calc(18vh + 10vw - 12rem), 16rem) * -1); */
     z-index: 1;
 }
 
@@ -1495,7 +1618,7 @@ footer nav {
         /* margin-bottom: unset; */
     }
 
-    .meet_frederic .content {
+    .meet_the_team .content {
         width: clamp(50rem, calc(50vw - 10rem), 70rem);
         margin-right: 5rem;
         max-height: unset;
@@ -1503,7 +1626,11 @@ footer nav {
         -webkit-mask-image: unset;
     }
 
-    .meet_frederic .expand {
+    .meet_the_team h2 {
+        max-width: 50rem;
+    }
+
+    .meet_the_team .expand {
         display: none;
     }
 
@@ -1517,41 +1644,43 @@ footer nav {
         margin-top: 9rem;
     }
 
-    .meet_frederic .content,
+    .meet_the_team .content,
     .our_menu .content,
     .the_road_trip .content,
     .luxembourg .content {
-        min-width: 40rem;
+        /* min-width: 40rem; */
         margin-bottom: 3rem;
         flex: 1;
     }
 
-    .meet_frederic .content {
+    .meet_the_team .content {
         max-width: 100vmin;
     }
 
-    .meet_frederic .composition {
-        width: clamp(35rem, 38vw, 50rem);
+    .meet_the_team .composition, .meet_the_team .composition img {
         margin-top: -3%;
         margin-bottom: 0;
         display: flex;
+        z-index: unset;
+        flex: unset;
+        width: clamp(30rem, 38vw, 50rem);
     }
 
-    .meet_frederic .composition img {
+    .meet_the_team .composition img {
         object-position: right;
     }
 
-    .meet_frederic .width,
+    .meet_the_team .width,
     .luxembourg .width {
         flex-flow: row wrap;
         align-items: flex-start;
     }
 
-    .meet_frederic .width,
+    .meet_the_team .width,
     .our_menu .width,
     .the_road_trip .width {
         justify-content: space-between;
-        gap: clamp(2rem, 5vw, 7rem);
+        gap: clamp(2rem, 6vw, 13rem);
         align-items: flex-start;
     }
 
@@ -1561,8 +1690,7 @@ footer nav {
         justify-content: space-between;
     }
 
-    section.our_menu {
-    }
+    section.our_menu {}
 
     .our_menu .composition {
         width: clamp(10rem, 40vw, 100rem);
@@ -1578,10 +1706,20 @@ footer nav {
         width: clamp(10rem, 20vw, 34rem);
         height: calc(clamp(10rem, 20vw, 34rem) * 1.45);
     }
-    
-    .our_menu .video_composition picture, .our_menu .video_composition picture img {width: clamp(5rem, 15vw, 26rem);}
 
-    .our_menu .video_composition picture {
+    .our_menu .video_composition picture, .our_menu .video_composition picture img {
+        width: clamp(5rem, 15vw, 26rem);
+    }
+
+    .our_menu .video_composition picture {}
+
+    .reviews .content {
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1.5vw;
+    } .reviews .box {
+        min-width: clamp(22rem, 17vw, 33rem);
+        flex: 1;
     }
 
     .terrace .width {
