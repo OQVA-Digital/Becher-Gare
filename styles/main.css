@@ -741,7 +741,7 @@ section.meet_the_team {
     font-size: clamp(3rem, 4vmax, 5rem);
     font-weight: 500;
     margin-bottom: clamp(1rem, 3vw, 1.8rem);
-    line-height: 1.15;
+    line-height: 1.2;
     letter-spacing: 0.05rem;
 }
 
@@ -886,7 +886,9 @@ section.our_menu {
     z-index: 1;
 }
 
-.our_menu p {}
+.our_menu p {
+    letter-spacing: 0.06rem;
+}
 
 .our_menu a {
     margin-top: 2.5rem;
@@ -924,7 +926,7 @@ section.private_hire {
 }
 
 .private_hire .width {
-    width: clamp(10rem, 80vw, 126rem);
+    width: clamp(10rem, 80vw, 113rem);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1089,7 +1091,7 @@ section.terrace {
     color: var(--grey);
     padding: clamp(2rem, 7.5vw, 4rem);
     border-radius: 0.3rem;
-    width: clamp(10rem, 70vw, 44rem);
+    width: clamp(10rem, 70vw, 42rem);
     max-width: 100%;
     /* height: 40vh; */
     position: sticky;
@@ -1127,9 +1129,9 @@ section.terrace {
 }
 
 .terrace .content p {
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.5;
-    font-size: clamp(1.3rem, 3.5vw, 1.6rem);
+    font-size: clamp(1.3rem, 3.5vw, 1.7rem);
 }
 
 .terrace .content b {
