@@ -738,11 +738,12 @@ section.meet_the_team {
 }
 
 .meet_the_team h2, .our_menu h2, .reviews h3 {
-    font-size: clamp(3rem, 4vmax, 5rem);
+    font-size: clamp(3.2rem, 4.2vmax, 5rem);
     font-weight: 500;
     margin-bottom: clamp(1rem, 3vw, 1.8rem);
     line-height: 1.2;
     letter-spacing: 0.05rem;
+    max-width: 99%;
 }
 
 .meet_the_team h2 span {
@@ -1549,7 +1550,7 @@ footer nav {
     }
 
     .meet_the_team h2 {
-        max-width: 50rem;
+        max-width: 67rem;
     }
 
     .meet_the_team .expand {
