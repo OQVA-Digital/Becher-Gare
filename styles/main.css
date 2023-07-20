@@ -729,7 +729,7 @@ section.meet_the_team {
 .meet_the_team .composition, .meet_the_team .composition img {
     width: clamp(10rem, 86vw, 50rem);
     max-height: 80vh;
-    max-width: 80vw;
+    max-width: 83vw;
     flex: 1;
 }
 
