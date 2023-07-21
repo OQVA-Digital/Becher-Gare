@@ -938,7 +938,7 @@ section.private_hire {
 }
 
 .private_hire .width {
-    width: clamp(10rem, 80vw, 113rem);
+    width: clamp(10rem, 80vw, 89rem);
     display: flex;
     flex-direction: column;
     align-items: center;
