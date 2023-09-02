@@ -253,6 +253,33 @@ button:focus-visible {
 
 
 
+.oqva_badge {
+    background-color:#1d1d1c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #CCC;
+    gap: 1rem;
+    padding-block: 1.3rem;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-weight: 400;
+    transition: background-color 0.3s ease;
+}
+
+.oqva_badge:hover {
+    background-color: #0E0E0E;
+    transition:background-color 0s ease;
+}
+
+.oqva_badge svg {
+    width: clamp(5rem, 13vw, 6rem);
+}
+
+
+
+
 
 @media screen and (min-width:900px) {
     .cookie-consent-button:first-of-type {
