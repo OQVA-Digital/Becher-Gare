@@ -19,6 +19,7 @@
     </script>
 
     <script src="scripts/consent.js" defer></script>
+    <script src="scripts/reservation-window.js" defer></script>
 
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -81,6 +82,12 @@
     </header>
 
     <main>
+        <div class="reservation_window">
+            <iframe src='https://bookings.zenchef.com/results?rid=362080&fullscreen=1' frameborder='0' scrolling='yes' width='100%' height='630' style='display: block; margin: 0 auto; max-width: 600px; height:630px;'></iframe>
+
+            <div class="exit_area" title="sortie"></div>
+        </div>
+
         <h1>Carte Eté <span>2023</span></h1>
 
         <section>
@@ -504,6 +511,8 @@
 
                 <!-- <p class="obs">(Ask for our Current Flavours with our Homemade Sorbets)</p> -->
             </div>
+
+            <button class="cta reserve" type="button">Réserver</button>
         </section>
 
         <!-- <section class="deals">

@@ -141,8 +141,40 @@ button:focus-visible {
     width: var(--width);
 }
 
+.reservation_window {
+    position: fixed;
+    z-index: 2;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+    -webkit-transition: opacity 0.4s ease, visibility 0.4s ease;
+    -moz-transition: opacity 0.4s ease, visibility 0.4s ease;
+    -ms-transition: opacity 0.4s ease, visibility 0.4s ease;
+    -o-transition: opacity 0.4s ease, visibility 0.4s ease;
+} .reservation_window.show {
+    opacity: 1;
+    visibility: visible;
+}
 
+.reservation_window iframe {
+    position: relative;
+    z-index: 2;
+    min-width: 10rem;
+    min-height: 10rem;
+    background-color: var(--light);
+    width: clamp(10rem, 85vw, 60rem);
+}
 
+.reservation_window .exit_area {
+    z-index: 1;
+    position: absolute;
+    inset: 0;
+    background-color: rgb(51 63 70 / 60%);
+}
 
 
 

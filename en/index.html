@@ -79,6 +79,7 @@
     <link rel="preload" href="../assets/video/hero-hor.mp4" as="video" type="video/mp4">
 
     <script src="../scripts/main.js" defer></script>
+    <script src="../scripts/reservation-window.js" defer></script>
     <script src="../scripts/spin.js" defer></script>
     <script src="../scripts/toggle-menu.js" defer></script>
     <script src="../scripts/scrollreveal.min.js"></script>
@@ -100,7 +101,6 @@
 </head>
 
 <body>
-
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K2FNCDK7"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -135,20 +135,6 @@
             </nav>
 
             <div class="contact modal">
-                <!-- <form name="basic-contact" method="POST" data-netlify="true">
-                    <p>
-                      <label>Your Name: <input type="text" name="name" required/></label>
-                    </p>
-                    <p>
-                      <label>Your Email: <input type="email" name="email" required/></label>
-                    </p>
-                    <p>
-                      <label>Message: <textarea name="message" required></textarea></label>
-                    </p>
-                    <p>
-                      <button type="submit">Send</button>
-                    </p>
-                  </form> -->
                   
                   <button class="close icon" type="button" title="close"></button>
                   
@@ -160,27 +146,33 @@
             </div>
 
             <div class="book modal opening_hours">
-                <p>Le Becher station welcomes you according to the following times:</p>
-
-                <h3>Coffee</h3>
+                <div class="modal_ctnr">
+                    <p>Le Becher station welcomes you according to the following times:</p>
     
-                <p><span>Thursday to Saturday</span> <span class="divider"></span> <span>11h00 to 21h30</span> </p>
-
-                <p><span>Sunday</span> <span class="divider"></span> <span>10h00 to 20h00</span></p>
-
-                <h3>Restaurant Lunch</h3>
+                    <h3>Coffee</h3>
+        
+                    <p><span>Thursday to Saturday</span> <span class="divider"></span> <span>11h00 to 21h30</span> </p>
     
-                <p><span>Thursday to Sunday</span> <span class="divider"></span> <span>12h00 to 14h00</span></p>
-
-                <h3>Restaurant Dinner</h3>
+                    <p><span>Sunday</span> <span class="divider"></span> <span>10h00 to 20h00</span></p>
     
-                <p><span>Thursday to Saturday</span> <span class="divider"></span> <span>19h00 to 21h30</span></p>
-
-                <p><span>Sunday</span> <span class="divider"></span> <span>18h30 to 20h00 <sub class="obs">(last order)</sub></span></p>
-                
-                <a class="cta" href="tel:+35226784240">Book now: +352 26 78 42 40</a>
-                  
-                <button class="close icon" type="button" title="close"></button>
+                    <h3>Restaurant Lunch</h3>
+        
+                    <p><span>Thursday to Sunday</span> <span class="divider"></span> <span>12h00 to 14h00</span></p>
+    
+                    <h3>Restaurant Dinner</h3>
+        
+                    <p><span>Thursday to Saturday</span> <span class="divider"></span> <span>19h00 to 21h30</span></p>
+    
+                    <p><span>Sunday</span> <span class="divider"></span> <span>18h30 to 20h00 <sub class="obs">(last order)</sub></span></p>
+                    
+                    <div class="cta_ctnr">
+                        <button class="cta reserve" type="button">Book now</button>
+                        
+                        <a class="cta" href="tel:+35226784240">Call us: +352 26 78 42 40</a>
+                    </div>
+                      
+                    <button class="close icon" type="button" title="close"></button>
+                </div>
             </div>
     
             <div class="logo">
@@ -206,6 +198,12 @@
     </header>
 
     <main>
+        <div class="reservation_window">
+            <iframe src='https://bookings.zenchef.com/results?rid=362080&fullscreen=1&lang=en' frameborder='0' scrolling='yes' width='100%' height='630' style='display: block; margin: 0 auto; max-width: 600px; height:630px;'></iframe>
+
+            <div class="exit_area" title="Exit"></div>
+        </div>
+
         <section class="intro">
             
             <div class="video_ctnr">

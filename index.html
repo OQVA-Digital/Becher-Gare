@@ -58,6 +58,7 @@
     <link rel="preload" href="assets/video/hero-hor.mp4" as="video" type="video/mp4">
 
     <script src="scripts/main.js" defer></script>
+    <script src="scripts/reservation-window.js" defer></script>
     <script src="scripts/spin.js" defer></script>
     <script src="scripts/toggle-menu.js" defer></script>
     <script src="scripts/scrollreveal.min.js"></script>
@@ -114,21 +115,6 @@
             </nav>
 
             <div class="contact modal">
-                <!-- <form name="basic-contact" method="POST" data-netlify="true">
-                    <p>
-                      <label>Votre nom: <input type="text" name="name" required/></label>
-                    </p>
-                    <p>
-                      <label>Votre e-mail: <input type="email" name="email" required/></label>
-                    </p>
-                    <p>
-                      <label>Message: <textarea name="message" required></textarea></label>
-                    </p>
-                    <p>
-                      <button type="submit">Envoyer</button>
-                    </p>
-                  </form> -->
-                  
                   <button class="close icon" type="button" title="close"></button>
 
                   
@@ -140,27 +126,33 @@
             </div>
 
             <div class="book modal opening_hours">
-                <p>Le Becher gare vous accueille selon les horaires suivants:</p>
+                <div class="modal_ctnr">
+                    <p>Le Becher gare vous accueille selon les horaires suivants:</p>
+        
+                    <h3>CAFÉ</h3>
+        
+                    <p><span>Jeudi au samedi</span> <span class="divider"></span> <span>11h00 à 21h30</span> </p>
     
-                <h3>CAFÉ</h3>
+                    <p><span>Dimanche</span> <span class="divider"></span> <span>10h00 à 20h00</span></p>
+        
+                    <h3>RESTAURANT LUNCH</h3>
+        
+                    <p><span>Jeudi au dimanche</span> <span class="divider"></span> <span>12h00 à 14h00</span></p>
+        
+                    <h3>RESTAURANT DÎNER</h3>
+        
+                    <p><span>Jeudi au samedi</span> <span class="divider"></span> <span>19h00 à 21h30</span></p>
     
-                <p><span>Jeudi au samedi</span> <span class="divider"></span> <span>11h00 à 21h30</span> </p>
-
-                <p><span>Dimanche</span> <span class="divider"></span> <span>10h00 à 20h00</span></p>
-    
-                <h3>RESTAURANT LUNCH</h3>
-    
-                <p><span>Jeudi au dimanche</span> <span class="divider"></span> <span>12h00 à 14h00</span></p>
-    
-                <h3>RESTAURANT DÎNER</h3>
-    
-                <p><span>Jeudi au samedi</span> <span class="divider"></span> <span>19h00 à 21h30</span></p>
-
-                <p><span>Dimanche</span> <span class="divider"></span> <span>18h30 à 20h00 <sub class="obs">(dernière commande)</sub></span></p>
-                
-                <a class="cta" href="tel:+35226784240">Réserver: +352 26 78 42 40</a>
-                  
-                <button class="close icon" type="button" title="close"></button>
+                    <p><span>Dimanche</span> <span class="divider"></span> <span>18h30 à 20h00 <sub class="obs">(dernière commande)</sub></span></p>
+                    
+                    <div class="cta_ctnr">
+                        <button class="cta reserve" type="button">Réserver</button>
+                        
+                        <a class="cta call_us" href="tel:+35226784240">Appelez-nous: +352 26 78 42 40</a>
+                    </div>
+                      
+                    <button class="close icon" type="button" title="close"></button>
+                </div>
             </div>
     
             <div class="logo">
@@ -193,15 +185,20 @@
 
 
     <main>
+        <div class="reservation_window">
+            <iframe src='https://bookings.zenchef.com/results?rid=362080&fullscreen=1' frameborder='0' scrolling='yes' width='100%' height='630' style='display: block; margin: 0 auto; max-width: 600px; height:630px;'></iframe>
+
+            <div class="exit_area" title="sortie"></div>
+        </div>
+
         <section class="intro">
-            
             <div class="video_ctnr">
                 <video autoplay muted playsinline loop poster="assets/video/hero-poster.jpg">
                     <!-- <source src="assets/video/BecherGare_Herosection.webm" type="video/webm"> -->
                     <source src="assets/video/hero-hor.mp4" type="video/mp4">
                 </video>
 
-                <h2>The Road Trip</h2>
+                <!-- <h2>The Road Trip</h2> -->
             </div>
 
             <div class="content reveal">
@@ -219,7 +216,7 @@
                 <div class="cta_ctnr">
                     <a href="menu.html" class="cta menu">Ouvrir le menu</a>
 
-                    <button type="button" class="cta book book_bt">Réserver</button>
+                    <button type="button" class="cta book book_bt">Réservez</button>
                 </div>
 
                 <a href="#about" class="fold">

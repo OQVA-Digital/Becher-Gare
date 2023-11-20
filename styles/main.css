@@ -170,17 +170,12 @@ header nav button:hover {
     color: var(--grey);
     bottom: 0;
     border-radius: 0.6rem;
-    /* transform: translateY(-50%); */
-    display: flex;
-    flex-direction: column;
     z-index: 6;
     transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.4s ease;
     opacity: 0;
     visibility: hidden;
-    padding: 3rem 3rem 3rem;
     box-sizing: border-box;
     transform: translateY(-1rem);
-    max-height: 85vh;
     box-shadow: 0 1rem 5rem -2rem var(--grey);
     border: 0.2rem solid var(--c1a);
     background-image: url(../assets/textures/white-paper.jpg);
@@ -201,6 +196,14 @@ header nav button:hover {
     background-image: url(../assets/textures/white-paper.jpg);
     background-image: image-set(url('../assets/textures/white-paper.webp') , url('../assets/textures/white-paper.jpg'));
     clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 100%);
+}
+
+.modal .modal_ctnr {
+    padding: 3rem 3rem 3rem;
+    max-height: calc(100vh - 27rem);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .modal .close {
@@ -285,12 +288,26 @@ header nav button:hover {
     font-size: clamp(1.3rem, 3.5vw, 1.4rem);
 }
 
+.book.modal .cta_ctnr {
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 4rem;
+    position: sticky;
+    bottom: 0;
+}
+
+.book.modal .cta_ctnr .reserve {
+    background-color: var(--c1);
+    color: var(--c2a);
+    font-weight: 500;
+}
+
 .book.modal a {
-    margin-top: 3rem;
+    /* margin-top: 3rem; */
 }
 
 .book.modal a,
-.direct_contact_bts a {
+.direct_contact_bts a, .book.modal .cta_ctnr button {
     color: var(--c1a);
     text-align: center;
     padding: 1rem 0;
